@@ -1,0 +1,54 @@
+property table
+PK: auto
+INT: PID
+string: address 
+string: city
+string: state
+FK: zipCode
+string: county
+bool: is_listed
+double: latitude
+double: longitude
+FK: propertyType
+int: bedrooms
+int: bathrooms
+int: squareFootage
+int: lotSize
+int: yearBuilt
+
+property type table:
+PK: auto
+string: discription
+
+property features table:
+FK: PK property table
+FK: featureType
+string: value_of_feature
+
+feature type definition table:
+PK: auto
+string: discription
+
+zip code to neighborhood table:
+PK: zip_code
+string: neighborhood
+
+transactions table:
+FK: PK property table
+FK: PK sell type
+date: date
+int: value_of_sale
+int: last_sale_price
+
+sell type table:
+PK: auto 
+string: sell_type ("listed_for_sale", "listed_for_rent", "is_rented", ...)
+
+tax history table:
+FK: PK property table
+date: date
+int: assesed value_of_sale
+
+Mass specific property table:
+FK: PK property table
+
