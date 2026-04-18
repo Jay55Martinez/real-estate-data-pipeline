@@ -1,0 +1,281 @@
+{
+  "result": {
+    "status": "success",
+    "message": "Property details fetched successfully",
+    "data": {
+      "overview": {
+        "fullAddress": "369 Maverick St, East Boston, 02128",
+        "owners": [
+          "Ould-Sahraouia Abdallah"
+        ],
+        "imageSrc": "https://storage.googleapis.com/assessing-properties-prod.firebasestorage.app/static-map-images/0105155000.png?GoogleAccessId=517145664496-compute%40developer.gserviceaccount.com&Expires=1776535571&Signature=WdGNzNDhfe46dE7hrJV09HDRxO%2FcI5OmpgSWmvTCZQOuTy0UYfvioatLJNYIHmrUdcjFlhoPg8Jw4aWbPdACWIeyxX%2BaPTcUIKZmFL%2FVIF3K7BGdR9DCF1QJYO4abeiuhLPKT%2BE%2BlHVAG3B602XOnVRMA0W9oIdE2inQEV4a4KEaIdxlwjlu901MoxbldrOvv7zCjI3T%2FI7r9C94p6UDXr6EGQQ8%2BLEQ3jzuWXbQaEP28irE4o%2FXlDloaLj4xXHucdNGH6EMZnCWKYHRKzNDplZxxCG9765I%2Fpqbab2jF57ZPgq%2Bw2pvpRkc56QfW7rmoVt9Tmu3CMqYSTIFXOZjcw%3D%3D",
+        "primaryOwnerInfo": {
+          "owner": "Ould-Sahraouia Abdallah",
+          "mailAddressee": null,
+          "mailStreetAddress": "48 Hawthorne St",
+          "mailCityAndState": "Lynn MA",
+          "mailZipCode": "01902"
+        },
+        "assessedValue": 923900,
+        "propertyTypeCode": "0105",
+        "propertyTypeDescription": "Residential Property",
+        "landUseCode": "R3",
+        "parcelId": "0105155000",
+        "netTax": 11558.52,
+        "totalBilledAmount": 11558.52,
+        "personalExemptionFlag": false,
+        "residentialExemptionFlag": false,
+        "personalExemptionAmount": 0,
+        "residentialExemptionAmount": 0,
+        "childParcelCount": 0,
+        "masterParcelId": null
+      },
+      "propertyValue": {
+        "historicPropertyValues": {
+          "1985": 32000,
+          "1986": 51300,
+          "1987": 61500,
+          "1988": 77500,
+          "1989": 133500,
+          "1990": 133500,
+          "1991": 133500,
+          "1992": 117600,
+          "1993": 98800,
+          "1994": 91800,
+          "1995": 60700,
+          "1996": 62500,
+          "1997": 60000,
+          "1998": 62200,
+          "1999": 64900,
+          "2000": 69200,
+          "2001": 129800,
+          "2002": 177000,
+          "2003": 198200,
+          "2004": 252300,
+          "2005": 295200,
+          "2006": 324100,
+          "2007": 402800,
+          "2008": 390700,
+          "2009": 332700,
+          "2010": 301300,
+          "2011": 283200,
+          "2012": 274800,
+          "2013": 283900,
+          "2014": 306600,
+          "2015": 352500,
+          "2016": 392600,
+          "2017": 451400,
+          "2018": 505600,
+          "2019": 566500,
+          "2020": 634300,
+          "2021": 744200,
+          "2022": 788900,
+          "2023": 883400,
+          "2024": 883400,
+          "2025": 923900,
+          "2026": 923900
+        }
+      },
+      "propertyAttributes": {
+        "attributeGroups": [
+          {
+            "title": "General",
+            "content": [
+              {
+                "label": "Land Use",
+                "value": "Three-Fam Dwelling"
+              },
+              {
+                "label": "Gross Area",
+                "value": "3,256 sq ft"
+              },
+              {
+                "label": "Living Area",
+                "value": "2,442 sq ft"
+              },
+              {
+                "label": "Lot Size",
+                "value": "2,500 sq ft"
+              },
+              {
+                "label": "Style",
+                "value": "Decker"
+              },
+              {
+                "label": "Story Height",
+                "value": "3"
+              },
+              {
+                "label": "Floor",
+                "value": null
+              },
+              {
+                "label": "Penthouse Unit",
+                "value": null
+              },
+              {
+                "label": "Orientation",
+                "value": null
+              },
+              {
+                "label": "View",
+                "value": "Average"
+              },
+              {
+                "label": "Grade",
+                "value": "Average"
+              }
+            ]
+          },
+          {
+            "title": "Rooms",
+            "content": [
+              {
+                "label": "Number of Bedrooms",
+                "value": 5
+              },
+              {
+                "label": "Total Bathrooms",
+                "value": "3.5"
+              },
+              {
+                "label": "Half Bathrooms",
+                "value": 1
+              },
+              {
+                "label": "Other Fixtures",
+                "value": null
+              },
+              {
+                "label": "Bath Style 1",
+                "value": "Semi-Modern"
+              },
+              {
+                "label": "Bath Style 2",
+                "value": "Semi-Modern"
+              },
+              {
+                "label": "Bath Style 3",
+                "value": "Semi-Modern"
+              },
+              {
+                "label": "Number of Kitchens",
+                "value": 3
+              },
+              {
+                "label": "Kitchen Type",
+                "value": "3 Full Eat In Kitchens"
+              },
+              {
+                "label": "Kitchen Style 1",
+                "value": "No Remodeling"
+              },
+              {
+                "label": "Kitchen Style 2",
+                "value": "No Remodeling"
+              },
+              {
+                "label": "Kitchen Style 3",
+                "value": "Semi-Modern"
+              }
+            ]
+          },
+          {
+            "title": "Construction & Condition",
+            "content": [
+              {
+                "label": "Year Built",
+                "value": 1900
+              },
+              {
+                "label": "Exterior Finish",
+                "value": "Vinyl"
+              },
+              {
+                "label": "Exterior Condition",
+                "value": "Average"
+              },
+              {
+                "label": "Interior Finish",
+                "value": "Normal"
+              },
+              {
+                "label": "Interior Condition",
+                "value": "Average"
+              },
+              {
+                "label": "Roof Cover",
+                "value": "Composition"
+              },
+              {
+                "label": "Roof Structure",
+                "value": "Flat"
+              },
+              {
+                "label": "Foundation",
+                "value": "Brick"
+              },
+              {
+                "label": "Parking Spots",
+                "value": null
+              }
+            ]
+          },
+          {
+            "title": "Utilities",
+            "content": [
+              {
+                "label": "Heat Type",
+                "value": "Ht Water/Steam"
+              },
+              {
+                "label": "AC Type",
+                "value": "None"
+              },
+              {
+                "label": "Fireplaces",
+                "value": null
+              }
+            ]
+          },
+          {
+            "title": "Last Transaction",
+            "content": [
+              {
+                "label": "Sale Price",
+                "value": "$185,000"
+              },
+              {
+                "label": "Sale Date",
+                "value": "August 1, 2000"
+              },
+              {
+                "label": "Registry Book & Page",
+                "value": "25200-072"
+              }
+            ]
+          }
+        ]
+      },
+      "propertyTaxes": {
+        "propertyGrossTax": 11456.36,
+        "residentialExemptionFlag": false,
+        "personalExemptionFlag": false,
+        "residentialExemptionAmount": 0,
+        "personalExemptionAmount": 0,
+        "communityPreservationAmount": 102.16,
+        "propertyNetTax": 11558.52,
+        "parcelId": "0105155000",
+        "personalExemptionAmount1": 0,
+        "personalExemptionAmount2": 0,
+        "estimatedTotalFirstHalf": 11456.36,
+        "totalBilledAmount": 11558.52,
+        "streetBetterment": 0,
+        "fine38d": 0,
+        "bidDowntown": 0,
+        "bidGreenway": 0,
+        "bidNewMarket": 0
+      }
+    }
+  }
+}

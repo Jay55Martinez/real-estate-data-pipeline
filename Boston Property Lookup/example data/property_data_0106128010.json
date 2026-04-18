@@ -1,0 +1,284 @@
+{
+  "result": {
+    "status": "success",
+    "message": "Property details fetched successfully",
+    "data": {
+      "overview": {
+        "fullAddress": "210-214 Havre St #5, East Boston, 02128",
+        "owners": [
+          "Strong Christina",
+          "Strong Andrew"
+        ],
+        "imageSrc": "https://storage.googleapis.com/assessing-properties-prod.firebasestorage.app/static-map-images/0106128010.png?GoogleAccessId=517145664496-compute%40developer.gserviceaccount.com&Expires=1776535587&Signature=c9l9%2BgOtgtgfsVGWjj6maBJKB6uLXlYOtfX1PgafhRG5%2FsYHnDRA%2F8yqxmMGltacBBQzivcOBWkfJ1aVGc5V474g8Klogr%2FNM2VSegxIKRbnYgyN7Q43vShfDh5Rm9Op45jc44BUZsgCzVmkf%2B8e2CBpoMQgU3q2ltP%2BmnMHap7PwY0Ec60KxHaBtouP6MxzIXWhYLqBAlhp6dsbaUSIaCgK%2Fa8LUm3Q%2FkLj6qglLU7gMpa%2FxHJ8JhbQqOAk8GL%2BqO5g%2BDG4weLFAorOk2alFbzg7u7ZC7HNvy9bPxVOfQ3dYxylH%2BJZXPrn%2FRBy6x3EiuEly8iOp3BMam9ySFhRHw%3D%3D",
+        "primaryOwnerInfo": {
+          "owner": "Strong Andrew",
+          "mailAddressee": null,
+          "mailStreetAddress": "210 Havre St, Unit 5",
+          "mailCityAndState": "East Boston MA",
+          "mailZipCode": "02128"
+        },
+        "assessedValue": 712100,
+        "propertyTypeCode": "0102",
+        "propertyTypeDescription": "Residential Property",
+        "landUseCode": "CD",
+        "parcelId": "0106128010",
+        "netTax": 4984.549999999999,
+        "totalBilledAmount": 9338.29,
+        "personalExemptionFlag": false,
+        "residentialExemptionFlag": 1,
+        "personalExemptionAmount": 0,
+        "residentialExemptionAmount": 4353.74,
+        "childParcelCount": 0,
+        "masterParcelId": "0106128000"
+      },
+      "propertyValue": {
+        "historicPropertyValues": {
+          "2026": 712100
+        }
+      },
+      "propertyAttributes": {
+        "attributeGroups": [
+          {
+            "title": "Condo Main Attributes",
+            "content": [
+              {
+                "label": "Master Parcel ID",
+                "value": "0106128000"
+              },
+              {
+                "label": "Grade",
+                "value": "Average"
+              },
+              {
+                "label": "Exterior Condition",
+                "value": "Excellent"
+              },
+              {
+                "label": "Exterior Finish",
+                "value": "Cement Board"
+              },
+              {
+                "label": "Foundation",
+                "value": "Stone"
+              },
+              {
+                "label": "Roof Cover",
+                "value": "Rubber Roof"
+              },
+              {
+                "label": "Roof Structure",
+                "value": "Flat"
+              }
+            ]
+          },
+          {
+            "title": "Unit Attributes",
+            "content": [
+              {
+                "title": "General",
+                "content": [
+                  {
+                    "label": "Land Use",
+                    "value": "Residential Condo"
+                  },
+                  {
+                    "label": "Gross Area",
+                    "value": "1,425 sq ft"
+                  },
+                  {
+                    "label": "Living Area",
+                    "value": "1,425 sq ft"
+                  },
+                  {
+                    "label": "Lot Size",
+                    "value": "1,425 sq ft"
+                  },
+                  {
+                    "label": "Style",
+                    "value": "Low Rise"
+                  },
+                  {
+                    "label": "Story Height",
+                    "value": "1"
+                  },
+                  {
+                    "label": "Floor",
+                    "value": "2"
+                  },
+                  {
+                    "label": "Penthouse Unit",
+                    "value": "0"
+                  },
+                  {
+                    "label": "Orientation",
+                    "value": "B - Rear Below"
+                  },
+                  {
+                    "label": "Corner Unit",
+                    "value": "N - No"
+                  },
+                  {
+                    "label": "View",
+                    "value": "Average"
+                  }
+                ]
+              },
+              {
+                "title": "Rooms",
+                "content": [
+                  {
+                    "label": "Total Rooms",
+                    "value": "4"
+                  },
+                  {
+                    "label": "Number of Bedrooms",
+                    "value": "2"
+                  },
+                  {
+                    "label": "Bedroom Type",
+                    "value": "Average"
+                  },
+                  {
+                    "label": "Total Bathrooms",
+                    "value": "2"
+                  },
+                  {
+                    "label": "Half Bathrooms",
+                    "value": null
+                  },
+                  {
+                    "label": "Other Fixtures",
+                    "value": null
+                  },
+                  {
+                    "label": "Bath Style 1",
+                    "value": "Modern"
+                  },
+                  {
+                    "label": "Bath Style 2",
+                    "value": "Modern"
+                  },
+                  {
+                    "label": "Bath Style 3",
+                    "value": null
+                  },
+                  {
+                    "label": "Number of Kitchens",
+                    "value": 1
+                  },
+                  {
+                    "label": "Kitchen Type",
+                    "value": "Full Eat In"
+                  },
+                  {
+                    "label": "Kitchen Style 1",
+                    "value": "Modern"
+                  },
+                  {
+                    "label": "Kitchen Style 2",
+                    "value": null
+                  },
+                  {
+                    "label": "Kitchen Style 3",
+                    "value": null
+                  }
+                ]
+              },
+              {
+                "title": "Construction & Condition",
+                "content": [
+                  {
+                    "label": "Year Built",
+                    "value": 2023
+                  },
+                  {
+                    "label": "Interior Finish",
+                    "value": "Normal"
+                  },
+                  {
+                    "label": "Interior Condition",
+                    "value": "Excellent"
+                  }
+                ]
+              },
+              {
+                "title": "Parking",
+                "content": [
+                  {
+                    "label": "Parking Spots",
+                    "value": "1"
+                  },
+                  {
+                    "label": "Parking Ownership",
+                    "value": "Easement"
+                  },
+                  {
+                    "label": "Parking Type",
+                    "value": "Indoor"
+                  },
+                  {
+                    "label": "Tandem Parking",
+                    "value": "N"
+                  }
+                ]
+              },
+              {
+                "title": "Utilities",
+                "content": [
+                  {
+                    "label": "Heat Type",
+                    "value": "Forced Hot Air"
+                  },
+                  {
+                    "label": "AC Type",
+                    "value": "Central Ac"
+                  },
+                  {
+                    "label": "Fireplaces",
+                    "value": null
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Last Transaction",
+            "content": [
+              {
+                "label": "Sale Price",
+                "value": "$750,000"
+              },
+              {
+                "label": "Sale Date",
+                "value": "May 21, 2025"
+              },
+              {
+                "label": "Registry Book & Page",
+                "value": "71428-74"
+              }
+            ]
+          }
+        ]
+      },
+      "propertyTaxes": {
+        "propertyGrossTax": 9305.93,
+        "residentialExemptionFlag": 1,
+        "personalExemptionFlag": false,
+        "residentialExemptionAmount": 4353.74,
+        "personalExemptionAmount": 0,
+        "communityPreservationAmount": 32.36,
+        "propertyNetTax": 4984.549999999999,
+        "parcelId": "0106128010",
+        "personalExemptionAmount1": 0,
+        "personalExemptionAmount2": 0,
+        "estimatedTotalFirstHalf": 4952.19,
+        "totalBilledAmount": 9338.29,
+        "streetBetterment": 0,
+        "fine38d": 0,
+        "bidDowntown": 0,
+        "bidGreenway": 0,
+        "bidNewMarket": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,307 @@
+{
+  "result": {
+    "status": "success",
+    "message": "Property details fetched successfully",
+    "data": {
+      "overview": {
+        "fullAddress": "120 Gove St, East Boston, 02128",
+        "owners": [
+          "Bne Reo Llc"
+        ],
+        "imageSrc": "https://storage.googleapis.com/assessing-properties-prod.firebasestorage.app/static-map-images/0104015000.png?GoogleAccessId=517145664496-compute%40developer.gserviceaccount.com&Expires=1776535516&Signature=RnZGhs7LOfTthdlpqI7KVseyeGqPLLMtFGL4KentuPUk%2FPYUg9YlQQQq%2Ff7ZbqvgAnKShjkCNXgNm6%2B5XeeA0NK5EIq42Ev1lo03fOh8685EnbM%2FH14twIRPMwimBT56nMVUC4GxyuH6ZGaTg43UpwWYo7ebDiG6Ht8RfXrwhQfnJfNxRf6%2BIHQ32Rm1SRVxjDyFFOJzqnx6VyxDjPHgFL9AFdt%2BRQfO%2FmMTyS8i7AqIlQAWWPykXC5Q%2FQZITT9hf4bxLEmD8nBG9Gcti7EBU8OlEM4Oacf3iwYaIEAbGIejggH%2FVZqGSfROPkE8HrjEb3QuJJpthCUsFK83lFK1Uw%3D%3D",
+        "primaryOwnerInfo": {
+          "owner": "Bne Reo Llc",
+          "mailAddressee": null,
+          "mailStreetAddress": "31 Pelham Rd",
+          "mailCityAndState": "Salem NH",
+          "mailZipCode": "03079"
+        },
+        "assessedValue": 1716900,
+        "propertyTypeCode": "0353",
+        "propertyTypeDescription": "Commercial Property",
+        "landUseCode": "C",
+        "parcelId": "0104015000",
+        "netTax": 46723.54,
+        "totalBilledAmount": 46723.54,
+        "personalExemptionFlag": false,
+        "residentialExemptionFlag": false,
+        "personalExemptionAmount": 0,
+        "residentialExemptionAmount": 0,
+        "childParcelCount": 0,
+        "masterParcelId": null
+      },
+      "propertyValue": {
+        "historicPropertyValues": {
+          "1985": 474200,
+          "1986": 503500,
+          "1987": 549000,
+          "1988": 648000,
+          "1989": 790500,
+          "1990": 636500,
+          "1991": 636500,
+          "1992": 771000,
+          "1993": 698500,
+          "1994": 698500,
+          "1995": 767500,
+          "1996": 767500,
+          "1997": 810500,
+          "1998": 816500,
+          "1999": 816500,
+          "2000": 816500,
+          "2001": 848400,
+          "2002": 848400,
+          "2003": 848400,
+          "2004": 1121800,
+          "2005": 1121800,
+          "2006": 1375000,
+          "2007": 1714900,
+          "2008": 1714900,
+          "2009": 2289600,
+          "2010": 1727800,
+          "2011": 1035200,
+          "2012": 1035200,
+          "2013": 1103000,
+          "2014": 1101000,
+          "2015": 1212500,
+          "2016": 1326000,
+          "2017": 1488500,
+          "2018": 1604000,
+          "2019": 1705500,
+          "2020": 1705700,
+          "2021": 1833000,
+          "2022": 1794900,
+          "2023": 1933000,
+          "2024": 1890000,
+          "2025": 1716900,
+          "2026": 1716900
+        }
+      },
+      "propertyAttributes": {
+        "attributeGroups": [
+          {
+            "title": "General",
+            "content": [
+              {
+                "label": "Land Use",
+                "value": "C"
+              },
+              {
+                "label": "Gross Area",
+                "value": "21,000 sq ft"
+              },
+              {
+                "label": "Living Area",
+                "value": "15,000 sq ft"
+              },
+              {
+                "label": "Lot Size",
+                "value": "9,220 sq ft"
+              },
+              {
+                "label": "Style",
+                "value": "Not available"
+              },
+              {
+                "label": "Story Height",
+                "value": "Not available"
+              },
+              {
+                "label": "Floor",
+                "value": null
+              },
+              {
+                "label": "Penthouse Unit",
+                "value": null
+              },
+              {
+                "label": "Orientation",
+                "value": null
+              },
+              {
+                "label": "View",
+                "value": null
+              },
+              {
+                "label": "Grade",
+                "value": null
+              }
+            ]
+          },
+          {
+            "title": "Rooms",
+            "content": [
+              {
+                "label": "Number of Bedrooms",
+                "value": null
+              },
+              {
+                "label": "Total Bathrooms",
+                "value": null
+              },
+              {
+                "label": "Half Bathrooms",
+                "value": null
+              },
+              {
+                "label": "Other Fixtures",
+                "value": null
+              },
+              {
+                "label": "Bath Style 1",
+                "value": null
+              },
+              {
+                "label": "Bath Style 2",
+                "value": null
+              },
+              {
+                "label": "Bath Style 3",
+                "value": null
+              },
+              {
+                "label": "Number of Kitchens",
+                "value": null
+              },
+              {
+                "label": "Kitchen Type",
+                "value": null
+              },
+              {
+                "label": "Kitchen Style 1",
+                "value": null
+              },
+              {
+                "label": "Kitchen Style 2",
+                "value": null
+              },
+              {
+                "label": "Kitchen Style 3",
+                "value": null
+              }
+            ]
+          },
+          {
+            "title": "Construction & Condition",
+            "content": [
+              {
+                "label": "Year Built",
+                "value": null
+              },
+              {
+                "label": "Exterior Finish",
+                "value": null
+              },
+              {
+                "label": "Exterior Condition",
+                "value": null
+              },
+              {
+                "label": "Interior Finish",
+                "value": null
+              },
+              {
+                "label": "Interior Condition",
+                "value": null
+              },
+              {
+                "label": "Roof Cover",
+                "value": null
+              },
+              {
+                "label": "Roof Structure",
+                "value": null
+              },
+              {
+                "label": "Foundation",
+                "value": "Not available"
+              },
+              {
+                "label": "Parking Spots",
+                "value": null
+              }
+            ]
+          },
+          {
+            "title": "Utilities",
+            "content": [
+              {
+                "label": "Heat Type",
+                "value": null
+              },
+              {
+                "label": "AC Type",
+                "value": null
+              },
+              {
+                "label": "Fireplaces",
+                "value": null
+              }
+            ]
+          },
+          {
+            "title": "Outbuildings",
+            "content": [
+              {
+                "title": "Outbuilding 1",
+                "content": [
+                  {
+                    "label": "Type",
+                    "value": "Security Fencing Cyclone"
+                  },
+                  {
+                    "label": "Size",
+                    "value": "60 sq ft"
+                  },
+                  {
+                    "label": "Quality",
+                    "value": "Average"
+                  },
+                  {
+                    "label": "Condition",
+                    "value": "Fair"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Last Transaction",
+            "content": [
+              {
+                "label": "Sale Price",
+                "value": "$9,000,000"
+              },
+              {
+                "label": "Sale Date",
+                "value": "November 14, 2024"
+              },
+              {
+                "label": "Registry Book & Page",
+                "value": "70799-285"
+              }
+            ]
+          }
+        ]
+      },
+      "propertyTaxes": {
+        "propertyGrossTax": 46287.62,
+        "residentialExemptionFlag": false,
+        "personalExemptionFlag": false,
+        "residentialExemptionAmount": 0,
+        "personalExemptionAmount": 0,
+        "communityPreservationAmount": 435.92,
+        "propertyNetTax": 46723.54,
+        "parcelId": "0104015000",
+        "personalExemptionAmount1": 0,
+        "personalExemptionAmount2": 0,
+        "estimatedTotalFirstHalf": 46287.62,
+        "totalBilledAmount": 46723.54,
+        "streetBetterment": 0,
+        "fine38d": 0,
+        "bidDowntown": 0,
+        "bidGreenway": 0,
+        "bidNewMarket": 0
+      }
+    }
+  }
+}

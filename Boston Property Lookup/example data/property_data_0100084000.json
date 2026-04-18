@@ -1,0 +1,309 @@
+{
+  "result": {
+    "status": "success",
+    "message": "Property details fetched successfully",
+    "data": {
+      "overview": {
+        "fullAddress": "376-A376 Chelsea St, East Boston, 02128",
+        "owners": [
+          "Cappuccio Neffo C",
+          "Cappuccio Raffaele",
+          "C&C Realty Trust"
+        ],
+        "imageSrc": "https://storage.googleapis.com/assessing-properties-prod.firebasestorage.app/static-map-images/0100084000.png?GoogleAccessId=517145664496-compute%40developer.gserviceaccount.com&Expires=1776535574&Signature=hCgQ%2BMuerdgZVOr3VfcUDNc2uPzdnH8FUpxOGzN25EhF1ag3nRZamqiXT3sSNamOJrVvt%2BeE1aZU49tKbm4xdl3p3YrCQbNI8NhR2zwl%2FoefTx9q8omaqxjfwlbsZyAchuPxbSTkmlA3u5YLYslQAlEko7wepJ3Sx2Fpyc9mOmB1%2F1ryfNJaF1iBjuafT%2BY1TdXhEsOUKzDbGFGTKSi5Uw9%2F%2BSUyGN7j3DqXNrZlqG7hEI54rU9YeLMDxhaj544m08FuBOecNsmPe%2F%2BuObRNOQ7wJPjXbA6fi5ULK%2FIIH2WQBJWO4lV6xudFsxqfVMZD0K0zBtBLbSbGWozhxBMIlQ%3D%3D",
+        "primaryOwnerInfo": {
+          "owner": "C&C Realty Trust",
+          "mailAddressee": "100 Dale St",
+          "mailStreetAddress": "C/O Neffo C Cappuccio",
+          "mailCityAndState": "REVERE",
+          "mailZipCode": "02151"
+        },
+        "assessedValue": 446600,
+        "propertyTypeCode": "0013",
+        "propertyTypeDescription": "Multiple use Property",
+        "landUseCode": "RC",
+        "parcelId": "0100084000",
+        "netTax": 8463.54,
+        "totalBilledAmount": 8463.54,
+        "personalExemptionFlag": false,
+        "residentialExemptionFlag": false,
+        "personalExemptionAmount": 0,
+        "residentialExemptionAmount": 0,
+        "childParcelCount": 0,
+        "masterParcelId": null
+      },
+      "propertyValue": {
+        "historicPropertyValues": {
+          "1985": 54500,
+          "1986": 80000,
+          "1987": 96000,
+          "1988": 117000,
+          "1989": 146500,
+          "1990": 146500,
+          "1991": 146500,
+          "1992": 103500,
+          "1993": 99500,
+          "1994": 99500,
+          "1995": 105500,
+          "1996": 109100,
+          "1997": 112500,
+          "1998": 101000,
+          "1999": 101000,
+          "2000": 111500,
+          "2001": 120500,
+          "2002": 129000,
+          "2003": 129000,
+          "2004": 176000,
+          "2005": 173000,
+          "2006": 192000,
+          "2007": 213500,
+          "2008": 217000,
+          "2009": 217000,
+          "2010": 205500,
+          "2011": 202500,
+          "2012": 204500,
+          "2013": 228500,
+          "2014": 263500,
+          "2015": 283500,
+          "2016": 320500,
+          "2017": 376000,
+          "2018": 402000,
+          "2019": 423000,
+          "2020": 430900,
+          "2021": 443800,
+          "2022": 438200,
+          "2023": 475400,
+          "2024": 464700,
+          "2025": 445200,
+          "2026": 446600
+        }
+      },
+      "propertyAttributes": {
+        "attributeGroups": [
+          {
+            "title": "General",
+            "content": [
+              {
+                "label": "Land Use",
+                "value": "RC"
+              },
+              {
+                "label": "Gross Area",
+                "value": "3,580 sq ft"
+              },
+              {
+                "label": "Living Area",
+                "value": "2,694 sq ft"
+              },
+              {
+                "label": "Lot Size",
+                "value": "1,175 sq ft"
+              },
+              {
+                "label": "Style",
+                "value": "Not available"
+              },
+              {
+                "label": "Story Height",
+                "value": "Not available"
+              },
+              {
+                "label": "Floor",
+                "value": null
+              },
+              {
+                "label": "Penthouse Unit",
+                "value": null
+              },
+              {
+                "label": "Orientation",
+                "value": null
+              },
+              {
+                "label": "View",
+                "value": null
+              },
+              {
+                "label": "Grade",
+                "value": null
+              }
+            ]
+          },
+          {
+            "title": "Rooms",
+            "content": [
+              {
+                "label": "Number of Bedrooms",
+                "value": null
+              },
+              {
+                "label": "Total Bathrooms",
+                "value": null
+              },
+              {
+                "label": "Half Bathrooms",
+                "value": null
+              },
+              {
+                "label": "Other Fixtures",
+                "value": null
+              },
+              {
+                "label": "Bath Style 1",
+                "value": null
+              },
+              {
+                "label": "Bath Style 2",
+                "value": null
+              },
+              {
+                "label": "Bath Style 3",
+                "value": null
+              },
+              {
+                "label": "Number of Kitchens",
+                "value": null
+              },
+              {
+                "label": "Kitchen Type",
+                "value": null
+              },
+              {
+                "label": "Kitchen Style 1",
+                "value": null
+              },
+              {
+                "label": "Kitchen Style 2",
+                "value": null
+              },
+              {
+                "label": "Kitchen Style 3",
+                "value": null
+              }
+            ]
+          },
+          {
+            "title": "Construction & Condition",
+            "content": [
+              {
+                "label": "Year Built",
+                "value": null
+              },
+              {
+                "label": "Exterior Finish",
+                "value": null
+              },
+              {
+                "label": "Exterior Condition",
+                "value": null
+              },
+              {
+                "label": "Interior Finish",
+                "value": null
+              },
+              {
+                "label": "Interior Condition",
+                "value": null
+              },
+              {
+                "label": "Roof Cover",
+                "value": null
+              },
+              {
+                "label": "Roof Structure",
+                "value": null
+              },
+              {
+                "label": "Foundation",
+                "value": "Not available"
+              },
+              {
+                "label": "Parking Spots",
+                "value": null
+              }
+            ]
+          },
+          {
+            "title": "Utilities",
+            "content": [
+              {
+                "label": "Heat Type",
+                "value": null
+              },
+              {
+                "label": "AC Type",
+                "value": null
+              },
+              {
+                "label": "Fireplaces",
+                "value": null
+              }
+            ]
+          },
+          {
+            "title": "Outbuildings",
+            "content": [
+              {
+                "title": "Outbuilding 1",
+                "content": [
+                  {
+                    "label": "Type",
+                    "value": "Retail Area"
+                  },
+                  {
+                    "label": "Size",
+                    "value": "886 sq ft"
+                  },
+                  {
+                    "label": "Quality",
+                    "value": "Average"
+                  },
+                  {
+                    "label": "Condition",
+                    "value": "Average"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Last Transaction",
+            "content": [
+              {
+                "label": "Sale Price",
+                "value": "$90,000"
+              },
+              {
+                "label": "Sale Date",
+                "value": "July 7, 1999"
+              },
+              {
+                "label": "Registry Book & Page",
+                "value": "23963-063"
+              }
+            ]
+          }
+        ]
+      },
+      "propertyTaxes": {
+        "propertyGrossTax": 8398.36,
+        "residentialExemptionFlag": false,
+        "personalExemptionFlag": false,
+        "residentialExemptionAmount": 0,
+        "personalExemptionAmount": 0,
+        "communityPreservationAmount": 65.18,
+        "propertyNetTax": 8463.54,
+        "parcelId": "0100084000",
+        "personalExemptionAmount1": 0,
+        "personalExemptionAmount2": 0,
+        "estimatedTotalFirstHalf": 8398.36,
+        "totalBilledAmount": 8463.54,
+        "streetBetterment": 0,
+        "fine38d": 0,
+        "bidDowntown": 0,
+        "bidGreenway": 0,
+        "bidNewMarket": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,329 @@
+{
+  "result": {
+    "status": "success",
+    "message": "Property details fetched successfully",
+    "data": {
+      "overview": {
+        "fullAddress": "285 Wm F Mcclellan Hw, East Boston, 02128",
+        "owners": [
+          "Auburn Plaza Inc",
+          "Slumber Time Llc"
+        ],
+        "imageSrc": "https://storage.googleapis.com/assessing-properties-prod.firebasestorage.app/static-map-images/0100549003.png?GoogleAccessId=517145664496-compute%40developer.gserviceaccount.com&Expires=1776535514&Signature=kGVRG9X60KDQbEOQu5hA2a3hUwrZyyohwXLL5Q05AyKZkxxUWhfBAMrBUB4TBTz2eDGzsR%2FDekhzFHzxrjcJthPFzyWZIs6jaIUM71HtsjKZaAiXi6BXePRAg%2BommC3T5Z19JwKUKjOzNpLC1pmw%2FBN3Piy43IJXUIHWOd0X7HbCwkahYgOk%2F3ATK1R4%2BktO%2BipR8TaY9tV42Snlq3u8oN2zQuQ2mWHjr%2FOVquztifCObVS62Rb%2Fdkj3n5GOPmBM7Znbv437Y8TwkH9a89cdSniCINa9Tj9zBL719KFP%2Fyvg21EOUrqeukPbKt5vE0J%2BWHok6aVUNgmqEZEv9ilyNw%3D%3D",
+        "primaryOwnerInfo": {
+          "owner": "Slumber Time Llc",
+          "mailAddressee": "1000 Market St Bldg 1",
+          "mailStreetAddress": "C/O Slumber Time Llc/Lisa Ade",
+          "mailCityAndState": "Portsmouth NH",
+          "mailZipCode": "03801"
+        },
+        "assessedValue": 848000,
+        "propertyTypeCode": "0337",
+        "propertyTypeDescription": "Commercial Property",
+        "landUseCode": "CL",
+        "parcelId": "0100549003",
+        "netTax": 23063.74,
+        "totalBilledAmount": 23063.74,
+        "personalExemptionFlag": false,
+        "residentialExemptionFlag": false,
+        "personalExemptionAmount": 0,
+        "residentialExemptionAmount": 0,
+        "childParcelCount": 0,
+        "masterParcelId": null
+      },
+      "propertyValue": {
+        "historicPropertyValues": {
+          "1985": 48500,
+          "1986": 56000,
+          "1987": 64500,
+          "1988": 74000,
+          "1989": 136000,
+          "1990": 135000,
+          "1991": 135000,
+          "1992": 108000,
+          "1993": 105000,
+          "1994": 105000,
+          "1995": 107000,
+          "1996": 109000,
+          "1997": 111000,
+          "1998": 125000,
+          "1999": 268000,
+          "2000": 268000,
+          "2001": 418900,
+          "2002": 418900,
+          "2003": 418900,
+          "2004": 428100,
+          "2005": 428100,
+          "2006": 462100,
+          "2007": 462500,
+          "2008": 462500,
+          "2009": 487600,
+          "2010": 485500,
+          "2011": 485500,
+          "2012": 485500,
+          "2013": 485500,
+          "2014": 486800,
+          "2015": 556700,
+          "2016": 640400,
+          "2017": 687100,
+          "2018": 749500,
+          "2019": 807800,
+          "2020": 813200,
+          "2021": 813200,
+          "2022": 848000,
+          "2023": 848000,
+          "2024": 848000,
+          "2025": 848000,
+          "2026": 848000
+        }
+      },
+      "propertyAttributes": {
+        "attributeGroups": [
+          {
+            "title": "General",
+            "content": [
+              {
+                "label": "Land Use",
+                "value": "CL"
+              },
+              {
+                "label": "Gross Area",
+                "value": null
+              },
+              {
+                "label": "Living Area",
+                "value": null
+              },
+              {
+                "label": "Lot Size",
+                "value": "16,197 sq ft"
+              },
+              {
+                "label": "Style",
+                "value": "Not available"
+              },
+              {
+                "label": "Story Height",
+                "value": "Not available"
+              },
+              {
+                "label": "Floor",
+                "value": null
+              },
+              {
+                "label": "Penthouse Unit",
+                "value": null
+              },
+              {
+                "label": "Orientation",
+                "value": null
+              },
+              {
+                "label": "View",
+                "value": null
+              },
+              {
+                "label": "Grade",
+                "value": null
+              }
+            ]
+          },
+          {
+            "title": "Rooms",
+            "content": [
+              {
+                "label": "Number of Bedrooms",
+                "value": null
+              },
+              {
+                "label": "Total Bathrooms",
+                "value": null
+              },
+              {
+                "label": "Half Bathrooms",
+                "value": null
+              },
+              {
+                "label": "Other Fixtures",
+                "value": null
+              },
+              {
+                "label": "Bath Style 1",
+                "value": null
+              },
+              {
+                "label": "Bath Style 2",
+                "value": null
+              },
+              {
+                "label": "Bath Style 3",
+                "value": null
+              },
+              {
+                "label": "Number of Kitchens",
+                "value": null
+              },
+              {
+                "label": "Kitchen Type",
+                "value": null
+              },
+              {
+                "label": "Kitchen Style 1",
+                "value": null
+              },
+              {
+                "label": "Kitchen Style 2",
+                "value": null
+              },
+              {
+                "label": "Kitchen Style 3",
+                "value": null
+              }
+            ]
+          },
+          {
+            "title": "Construction & Condition",
+            "content": [
+              {
+                "label": "Year Built",
+                "value": null
+              },
+              {
+                "label": "Exterior Finish",
+                "value": null
+              },
+              {
+                "label": "Exterior Condition",
+                "value": null
+              },
+              {
+                "label": "Interior Finish",
+                "value": null
+              },
+              {
+                "label": "Interior Condition",
+                "value": null
+              },
+              {
+                "label": "Roof Cover",
+                "value": null
+              },
+              {
+                "label": "Roof Structure",
+                "value": null
+              },
+              {
+                "label": "Foundation",
+                "value": "Not available"
+              },
+              {
+                "label": "Parking Spots",
+                "value": null
+              }
+            ]
+          },
+          {
+            "title": "Utilities",
+            "content": [
+              {
+                "label": "Heat Type",
+                "value": null
+              },
+              {
+                "label": "AC Type",
+                "value": null
+              },
+              {
+                "label": "Fireplaces",
+                "value": null
+              }
+            ]
+          },
+          {
+            "title": "Outbuildings",
+            "content": [
+              {
+                "title": "Outbuilding 1",
+                "content": [
+                  {
+                    "label": "Type",
+                    "value": "Yard Paving Blacktop"
+                  },
+                  {
+                    "label": "Size",
+                    "value": "14,987 sq ft"
+                  },
+                  {
+                    "label": "Quality",
+                    "value": "Average"
+                  },
+                  {
+                    "label": "Condition",
+                    "value": "Poor"
+                  }
+                ]
+              },
+              {
+                "title": "Outbuilding 2",
+                "content": [
+                  {
+                    "label": "Type",
+                    "value": "Security Fencing Cyclone"
+                  },
+                  {
+                    "label": "Size",
+                    "value": "432 sq ft"
+                  },
+                  {
+                    "label": "Quality",
+                    "value": "Average"
+                  },
+                  {
+                    "label": "Condition",
+                    "value": "Poor"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Last Transaction",
+            "content": [
+              {
+                "label": "Sale Price",
+                "value": "$43,000,000"
+              },
+              {
+                "label": "Sale Date",
+                "value": "February 1, 2017"
+              },
+              {
+                "label": "Registry Book & Page",
+                "value": "57514-228"
+              }
+            ]
+          }
+        ]
+      },
+      "propertyTaxes": {
+        "propertyGrossTax": 22862.08,
+        "residentialExemptionFlag": false,
+        "personalExemptionFlag": false,
+        "residentialExemptionAmount": 0,
+        "personalExemptionAmount": 0,
+        "communityPreservationAmount": 201.66,
+        "propertyNetTax": 23063.74,
+        "parcelId": "0100549003",
+        "personalExemptionAmount1": 0,
+        "personalExemptionAmount2": 0,
+        "estimatedTotalFirstHalf": 22862.08,
+        "totalBilledAmount": 23063.74,
+        "streetBetterment": 0,
+        "fine38d": 0,
+        "bidDowntown": 0,
+        "bidGreenway": 0,
+        "bidNewMarket": 0
+      }
+    }
+  }
+}

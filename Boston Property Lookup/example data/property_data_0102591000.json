@@ -1,0 +1,281 @@
+{
+  "result": {
+    "status": "success",
+    "message": "Property details fetched successfully",
+    "data": {
+      "overview": {
+        "fullAddress": "12 Princeton St, East Boston, 02128",
+        "owners": [
+          "Hannigan &  Pali Realty  Llc"
+        ],
+        "imageSrc": "https://storage.googleapis.com/assessing-properties-prod.firebasestorage.app/static-map-images/0102591000.png?GoogleAccessId=517145664496-compute%40developer.gserviceaccount.com&Expires=1776535545&Signature=Ziy0yyokacFLpsyxEvOO5fErIVbQ1o2GNutcDhL9QKEUGcYee32Y0bTL9UYB2d81qvJmzz1Lyd4PQmVlB0IDvUt2M6wlxyAll9Z8SxtadPW4Ek1jIJ6WwXx6AIwtbvTocZIVoNXg6F%2FYWETLmKoxstk6np%2BWIhYBQyof%2FecHQOcCWLegJoF%2FBRapAk4ZQsvByJ0hRSSmnjm1lOVCCOFCJGt9K55ISTkFvrfiWGY0Cp1g2zWT%2Bwtap0PFvlVQKDulk06qOSSRb%2FfgS5TOZUFgwOhhH6e1Wiv21GcM0kyO2oX2NjT8p5q0OTwP2BUrMXYnPboSaH3LAW%2BUfxbEll0YJg%3D%3D",
+        "primaryOwnerInfo": {
+          "owner": "Hannigan &  Pali Realty  Llc",
+          "mailAddressee": null,
+          "mailStreetAddress": "83 Highland St",
+          "mailCityAndState": "Canton MA",
+          "mailZipCode": "02021"
+        },
+        "assessedValue": 855400,
+        "propertyTypeCode": "0105",
+        "propertyTypeDescription": "Residential Property",
+        "landUseCode": "R3",
+        "parcelId": "0102591000",
+        "netTax": 10700.63,
+        "totalBilledAmount": 10700.63,
+        "personalExemptionFlag": false,
+        "residentialExemptionFlag": false,
+        "personalExemptionAmount": 0,
+        "residentialExemptionAmount": 0,
+        "childParcelCount": 0,
+        "masterParcelId": null
+      },
+      "propertyValue": {
+        "historicPropertyValues": {
+          "1985": 37000,
+          "1986": 38600,
+          "1987": 46400,
+          "1988": 58400,
+          "1989": 115900,
+          "1990": 115900,
+          "1991": 115900,
+          "1992": 105600,
+          "1993": 88700,
+          "1994": 82500,
+          "1995": 75500,
+          "1996": 77900,
+          "1997": 74800,
+          "1998": 62400,
+          "1999": 68000,
+          "2000": 72900,
+          "2001": 117700,
+          "2002": 131900,
+          "2003": 204700,
+          "2004": 288900,
+          "2005": 314800,
+          "2006": 338200,
+          "2007": 369700,
+          "2008": 354400,
+          "2009": 262700,
+          "2010": 207500,
+          "2011": 195100,
+          "2012": 195100,
+          "2013": 200500,
+          "2014": 216500,
+          "2015": 249000,
+          "2016": 204250,
+          "2017": 468700,
+          "2018": 539200,
+          "2019": 593800,
+          "2020": 665200,
+          "2021": 763400,
+          "2022": 763400,
+          "2023": 832000,
+          "2024": 840500,
+          "2025": 830500,
+          "2026": 855400
+        }
+      },
+      "propertyAttributes": {
+        "attributeGroups": [
+          {
+            "title": "General",
+            "content": [
+              {
+                "label": "Land Use",
+                "value": "Three-Fam Dwelling"
+              },
+              {
+                "label": "Gross Area",
+                "value": "2,816 sq ft"
+              },
+              {
+                "label": "Living Area",
+                "value": "1,896 sq ft"
+              },
+              {
+                "label": "Lot Size",
+                "value": "1,039 sq ft"
+              },
+              {
+                "label": "Style",
+                "value": "Row Middle"
+              },
+              {
+                "label": "Story Height",
+                "value": "3"
+              },
+              {
+                "label": "Floor",
+                "value": null
+              },
+              {
+                "label": "Penthouse Unit",
+                "value": null
+              },
+              {
+                "label": "Orientation",
+                "value": null
+              },
+              {
+                "label": "View",
+                "value": "Average"
+              },
+              {
+                "label": "Grade",
+                "value": "Average"
+              }
+            ]
+          },
+          {
+            "title": "Rooms",
+            "content": [
+              {
+                "label": "Number of Bedrooms",
+                "value": 5
+              },
+              {
+                "label": "Total Bathrooms",
+                "value": "3"
+              },
+              {
+                "label": "Half Bathrooms",
+                "value": null
+              },
+              {
+                "label": "Other Fixtures",
+                "value": null
+              },
+              {
+                "label": "Bath Style 1",
+                "value": "Modern"
+              },
+              {
+                "label": "Bath Style 2",
+                "value": "Modern"
+              },
+              {
+                "label": "Bath Style 3",
+                "value": "Modern"
+              },
+              {
+                "label": "Number of Kitchens",
+                "value": 3
+              },
+              {
+                "label": "Kitchen Type",
+                "value": "3 Full Eat In Kitchens"
+              },
+              {
+                "label": "Kitchen Style 1",
+                "value": "Modern"
+              },
+              {
+                "label": "Kitchen Style 2",
+                "value": "Modern"
+              },
+              {
+                "label": "Kitchen Style 3",
+                "value": "Modern"
+              }
+            ]
+          },
+          {
+            "title": "Construction & Condition",
+            "content": [
+              {
+                "label": "Year Built",
+                "value": 1900
+              },
+              {
+                "label": "Exterior Finish",
+                "value": "Vinyl"
+              },
+              {
+                "label": "Exterior Condition",
+                "value": "Average"
+              },
+              {
+                "label": "Interior Finish",
+                "value": "Normal"
+              },
+              {
+                "label": "Interior Condition",
+                "value": "Good"
+              },
+              {
+                "label": "Roof Cover",
+                "value": "Rubber Roof"
+              },
+              {
+                "label": "Roof Structure",
+                "value": "Flat"
+              },
+              {
+                "label": "Foundation",
+                "value": "Brick"
+              },
+              {
+                "label": "Parking Spots",
+                "value": null
+              }
+            ]
+          },
+          {
+            "title": "Utilities",
+            "content": [
+              {
+                "label": "Heat Type",
+                "value": "Ht Water/Steam"
+              },
+              {
+                "label": "AC Type",
+                "value": "None"
+              },
+              {
+                "label": "Fireplaces",
+                "value": null
+              }
+            ]
+          },
+          {
+            "title": "Last Transaction",
+            "content": [
+              {
+                "label": "Sale Price",
+                "value": "$9"
+              },
+              {
+                "label": "Sale Date",
+                "value": "February 26, 2019"
+              },
+              {
+                "label": "Registry Book & Page",
+                "value": "60784-166"
+              }
+            ]
+          }
+        ]
+      },
+      "propertyTaxes": {
+        "propertyGrossTax": 10606.96,
+        "residentialExemptionFlag": false,
+        "personalExemptionFlag": false,
+        "residentialExemptionAmount": 0,
+        "personalExemptionAmount": 0,
+        "communityPreservationAmount": 93.67,
+        "propertyNetTax": 10700.63,
+        "parcelId": "0102591000",
+        "personalExemptionAmount1": 0,
+        "personalExemptionAmount2": 0,
+        "estimatedTotalFirstHalf": 10606.96,
+        "totalBilledAmount": 10700.63,
+        "streetBetterment": 0,
+        "fine38d": 0,
+        "bidDowntown": 0,
+        "bidGreenway": 0,
+        "bidNewMarket": 0
+      }
+    }
+  }
+}

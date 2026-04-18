@@ -1,0 +1,282 @@
+{
+  "result": {
+    "status": "success",
+    "message": "Property details fetched successfully",
+    "data": {
+      "overview": {
+        "fullAddress": "125 Sumner St, East Boston, 02128",
+        "owners": [
+          "Boston Housing Authority",
+          "Clippership Apartments Lp"
+        ],
+        "imageSrc": "https://storage.googleapis.com/assessing-properties-prod.firebasestorage.app/static-map-images/0105401000.png?GoogleAccessId=517145664496-compute%40developer.gserviceaccount.com&Expires=1776535548&Signature=FVhaegRCtZZqyaAS3jaSBx0GrtDiDVhMxf0kORGa65Z%2BS5DbC7ZNUrdMZ7fPaZ4aGy7fpiYYZ2TrUKvB0ajAPgPNT9GkkoAXYKX9qyJhEEBhv44v%2BdxYqozlVcOojpwMdNnDbynPGGH23H3aIddcJ3OI2hnLQqyom2v39BbhQqXzz42OyEuiiIPF9v19q92LvoH8doEzSLZIrk%2FJsAnUos1hEszYB3AsckLxBoz94%2B4XAnOTKdU7aiJojdbBl%2FgY4Lwxcxi6fZHHCqS7YzuxZk9BwrfUaQop2zHmhsW1r9yGIbasGD0eKwyt3SSawxc%2BupEzyU743I9Kmy2hzdn2aA%3D%3D",
+        "primaryOwnerInfo": {
+          "owner": "Clippership Apartments Lp",
+          "mailAddressee": "One Washington Mall Ste#500",
+          "mailStreetAddress": "C/O Winncompanies",
+          "mailCityAndState": "Boston MA",
+          "mailZipCode": "02108"
+        },
+        "assessedValue": 4069800,
+        "propertyTypeCode": "0125",
+        "propertyTypeDescription": "Other Residential",
+        "landUseCode": "A",
+        "parcelId": "0105401000",
+        "netTax": 50957.78,
+        "totalBilledAmount": 50957.78,
+        "personalExemptionFlag": false,
+        "residentialExemptionFlag": false,
+        "personalExemptionAmount": 0,
+        "residentialExemptionAmount": 0,
+        "childParcelCount": 0,
+        "masterParcelId": null
+      },
+      "propertyValue": {
+        "historicPropertyValues": {
+          "1985": 3110400,
+          "1986": 3312000,
+          "1987": 3610000,
+          "1988": 4260000,
+          "1989": 5197000,
+          "1990": 1082000,
+          "1991": 1082000,
+          "1992": 1343000,
+          "1993": 1212500,
+          "1994": 1212500,
+          "1995": 1306000,
+          "1996": 1306000,
+          "1997": 1374500,
+          "1998": 1680000,
+          "1999": 1680000,
+          "2000": 1680000,
+          "2001": 1685400,
+          "2002": 1685400,
+          "2003": 1685400,
+          "2004": 2602500,
+          "2005": 2602500,
+          "2006": 2864800,
+          "2007": 4251300,
+          "2008": 4251300,
+          "2009": 3121300,
+          "2010": 3182400,
+          "2011": 3138000,
+          "2012": 3138000,
+          "2013": 3499400,
+          "2014": 4116600,
+          "2015": 4394700,
+          "2016": 4899700,
+          "2017": 5726100,
+          "2018": 6012500,
+          "2019": 6154800,
+          "2020": 4317100,
+          "2021": 1036900,
+          "2022": 2657200,
+          "2023": 3811300,
+          "2024": 3811300,
+          "2025": 3757800,
+          "2026": 4069800
+        }
+      },
+      "propertyAttributes": {
+        "attributeGroups": [
+          {
+            "title": "General",
+            "content": [
+              {
+                "label": "Land Use",
+                "value": "A"
+              },
+              {
+                "label": "Gross Area",
+                "value": "44,420 sq ft"
+              },
+              {
+                "label": "Living Area",
+                "value": "33,315 sq ft"
+              },
+              {
+                "label": "Lot Size",
+                "value": null
+              },
+              {
+                "label": "Style",
+                "value": "Not available"
+              },
+              {
+                "label": "Story Height",
+                "value": "Not available"
+              },
+              {
+                "label": "Floor",
+                "value": null
+              },
+              {
+                "label": "Penthouse Unit",
+                "value": null
+              },
+              {
+                "label": "Orientation",
+                "value": null
+              },
+              {
+                "label": "View",
+                "value": null
+              },
+              {
+                "label": "Grade",
+                "value": null
+              }
+            ]
+          },
+          {
+            "title": "Rooms",
+            "content": [
+              {
+                "label": "Number of Bedrooms",
+                "value": null
+              },
+              {
+                "label": "Total Bathrooms",
+                "value": null
+              },
+              {
+                "label": "Half Bathrooms",
+                "value": null
+              },
+              {
+                "label": "Other Fixtures",
+                "value": null
+              },
+              {
+                "label": "Bath Style 1",
+                "value": null
+              },
+              {
+                "label": "Bath Style 2",
+                "value": null
+              },
+              {
+                "label": "Bath Style 3",
+                "value": null
+              },
+              {
+                "label": "Number of Kitchens",
+                "value": null
+              },
+              {
+                "label": "Kitchen Type",
+                "value": null
+              },
+              {
+                "label": "Kitchen Style 1",
+                "value": null
+              },
+              {
+                "label": "Kitchen Style 2",
+                "value": null
+              },
+              {
+                "label": "Kitchen Style 3",
+                "value": null
+              }
+            ]
+          },
+          {
+            "title": "Construction & Condition",
+            "content": [
+              {
+                "label": "Year Built",
+                "value": null
+              },
+              {
+                "label": "Exterior Finish",
+                "value": null
+              },
+              {
+                "label": "Exterior Condition",
+                "value": null
+              },
+              {
+                "label": "Interior Finish",
+                "value": null
+              },
+              {
+                "label": "Interior Condition",
+                "value": null
+              },
+              {
+                "label": "Roof Cover",
+                "value": null
+              },
+              {
+                "label": "Roof Structure",
+                "value": null
+              },
+              {
+                "label": "Foundation",
+                "value": "Not available"
+              },
+              {
+                "label": "Parking Spots",
+                "value": null
+              }
+            ]
+          },
+          {
+            "title": "Utilities",
+            "content": [
+              {
+                "label": "Heat Type",
+                "value": null
+              },
+              {
+                "label": "AC Type",
+                "value": null
+              },
+              {
+                "label": "Fireplaces",
+                "value": null
+              }
+            ]
+          },
+          {
+            "title": "Last Transaction",
+            "content": [
+              {
+                "label": "Sale Price",
+                "value": "$9"
+              },
+              {
+                "label": "Sale Date",
+                "value": "January 1, 2020"
+              },
+              {
+                "label": "Registry Book & Page",
+                "value": "33333-333"
+              }
+            ]
+          }
+        ]
+      },
+      "propertyTaxes": {
+        "propertyGrossTax": 50465.52,
+        "residentialExemptionFlag": false,
+        "personalExemptionFlag": false,
+        "residentialExemptionAmount": 0,
+        "personalExemptionAmount": 0,
+        "communityPreservationAmount": 492.26,
+        "propertyNetTax": 50957.78,
+        "parcelId": "0105401000",
+        "personalExemptionAmount1": 0,
+        "personalExemptionAmount2": 0,
+        "estimatedTotalFirstHalf": 50465.52,
+        "totalBilledAmount": 50957.78,
+        "streetBetterment": 0,
+        "fine38d": 0,
+        "bidDowntown": 0,
+        "bidGreenway": 0,
+        "bidNewMarket": 0
+      }
+    }
+  }
+}

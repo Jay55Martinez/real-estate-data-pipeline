@@ -1,0 +1,282 @@
+{
+  "result": {
+    "status": "success",
+    "message": "Property details fetched successfully",
+    "data": {
+      "overview": {
+        "fullAddress": "Border St, East Boston, 02128",
+        "owners": [
+          "Mass Municipal Corp",
+          "City Of Boston"
+        ],
+        "imageSrc": "https://storage.googleapis.com/assessing-properties-prod.firebasestorage.app/static-map-images/0103679000.png?GoogleAccessId=517145664496-compute%40developer.gserviceaccount.com&Expires=1776535525&Signature=LadfE6xMr8JhHcHgOdQBTkdLxLnSxcGHTqUAit2XSeO%2FfLS%2FX8HafOGT0RUVMp3u%2BNeNCcQ%2F6MszD0uJvktZo%2FhltaA%2FmT3XZTWfZeO%2FYMb16Pk9ChAB9cj3pllNbQWwv%2B4qvDeHSvYBylyVQH9lAWJ0tMRAKkTtWPB7c4od%2F9x3jNt4ewVsY18GZjgfGTVcZINu6gugGdTT%2BwiY6w%2BAillDy71z1KXW8JuuhU1hb3uPmi2%2B5dzaZrrUKLlBfIAEHjKDJEvYUaV2OPpwr5pdbTm3AniGue2WX8pADOHE4oIgeCr5eQUzhMNzUiwaYIqRJJeApLSxalx7K6vQHMjWPA%3D%3D",
+        "primaryOwnerInfo": {
+          "owner": "City Of Boston",
+          "mailAddressee": null,
+          "mailStreetAddress": "BORDER",
+          "mailCityAndState": "East Boston MA",
+          "mailZipCode": "02128"
+        },
+        "assessedValue": 5711600,
+        "propertyTypeCode": "0985",
+        "propertyTypeDescription": "Exempt Property Type",
+        "landUseCode": "E",
+        "parcelId": "0103679000",
+        "netTax": 0,
+        "totalBilledAmount": 0,
+        "personalExemptionFlag": false,
+        "residentialExemptionFlag": false,
+        "personalExemptionAmount": 0,
+        "residentialExemptionAmount": 0,
+        "childParcelCount": 0,
+        "masterParcelId": null
+      },
+      "propertyValue": {
+        "historicPropertyValues": {
+          "1985": 617700,
+          "1986": 750500,
+          "1987": 818000,
+          "1988": 965000,
+          "1989": 1177500,
+          "1990": 1359000,
+          "1991": 1359000,
+          "1992": 1812000,
+          "1993": 1449500,
+          "1994": 1449500,
+          "1995": 1173500,
+          "1996": 1178000,
+          "1997": 1178000,
+          "1998": 1241000,
+          "1999": 1241000,
+          "2000": 1241000,
+          "2001": 1658000,
+          "2002": 1658000,
+          "2003": 1658000,
+          "2004": 1744100,
+          "2005": 1744100,
+          "2006": 1916200,
+          "2007": 2120000,
+          "2008": 2120000,
+          "2009": 1793900,
+          "2010": 1793900,
+          "2011": 1793900,
+          "2012": 1793900,
+          "2013": 2790500,
+          "2014": 2790500,
+          "2015": 3139300,
+          "2016": 3664800,
+          "2017": 3836900,
+          "2018": 4185700,
+          "2019": 4394100,
+          "2020": 4394900,
+          "2021": 4185700,
+          "2022": 5711600,
+          "2023": 5711600,
+          "2024": 5711600,
+          "2025": 5711600,
+          "2026": 5711600
+        }
+      },
+      "propertyAttributes": {
+        "attributeGroups": [
+          {
+            "title": "General",
+            "content": [
+              {
+                "label": "Land Use",
+                "value": "E"
+              },
+              {
+                "label": "Gross Area",
+                "value": "1 sq ft"
+              },
+              {
+                "label": "Living Area",
+                "value": "1 sq ft"
+              },
+              {
+                "label": "Lot Size",
+                "value": "453,000 sq ft"
+              },
+              {
+                "label": "Style",
+                "value": "Not available"
+              },
+              {
+                "label": "Story Height",
+                "value": "Not available"
+              },
+              {
+                "label": "Floor",
+                "value": null
+              },
+              {
+                "label": "Penthouse Unit",
+                "value": null
+              },
+              {
+                "label": "Orientation",
+                "value": null
+              },
+              {
+                "label": "View",
+                "value": null
+              },
+              {
+                "label": "Grade",
+                "value": null
+              }
+            ]
+          },
+          {
+            "title": "Rooms",
+            "content": [
+              {
+                "label": "Number of Bedrooms",
+                "value": null
+              },
+              {
+                "label": "Total Bathrooms",
+                "value": null
+              },
+              {
+                "label": "Half Bathrooms",
+                "value": null
+              },
+              {
+                "label": "Other Fixtures",
+                "value": null
+              },
+              {
+                "label": "Bath Style 1",
+                "value": null
+              },
+              {
+                "label": "Bath Style 2",
+                "value": null
+              },
+              {
+                "label": "Bath Style 3",
+                "value": null
+              },
+              {
+                "label": "Number of Kitchens",
+                "value": null
+              },
+              {
+                "label": "Kitchen Type",
+                "value": null
+              },
+              {
+                "label": "Kitchen Style 1",
+                "value": null
+              },
+              {
+                "label": "Kitchen Style 2",
+                "value": null
+              },
+              {
+                "label": "Kitchen Style 3",
+                "value": null
+              }
+            ]
+          },
+          {
+            "title": "Construction & Condition",
+            "content": [
+              {
+                "label": "Year Built",
+                "value": null
+              },
+              {
+                "label": "Exterior Finish",
+                "value": null
+              },
+              {
+                "label": "Exterior Condition",
+                "value": null
+              },
+              {
+                "label": "Interior Finish",
+                "value": null
+              },
+              {
+                "label": "Interior Condition",
+                "value": null
+              },
+              {
+                "label": "Roof Cover",
+                "value": null
+              },
+              {
+                "label": "Roof Structure",
+                "value": null
+              },
+              {
+                "label": "Foundation",
+                "value": "Not available"
+              },
+              {
+                "label": "Parking Spots",
+                "value": null
+              }
+            ]
+          },
+          {
+            "title": "Utilities",
+            "content": [
+              {
+                "label": "Heat Type",
+                "value": null
+              },
+              {
+                "label": "AC Type",
+                "value": null
+              },
+              {
+                "label": "Fireplaces",
+                "value": null
+              }
+            ]
+          },
+          {
+            "title": "Last Transaction",
+            "content": [
+              {
+                "label": "Sale Price",
+                "value": null
+              },
+              {
+                "label": "Sale Date",
+                "value": "January 1, 1987"
+              },
+              {
+                "label": "Registry Book & Page",
+                "value": "00000-000"
+              }
+            ]
+          }
+        ]
+      },
+      "propertyTaxes": {
+        "propertyGrossTax": 0,
+        "residentialExemptionFlag": false,
+        "personalExemptionFlag": false,
+        "residentialExemptionAmount": 0,
+        "personalExemptionAmount": 0,
+        "communityPreservationAmount": 0,
+        "propertyNetTax": 0,
+        "parcelId": "0103679000",
+        "personalExemptionAmount1": 0,
+        "personalExemptionAmount2": 0,
+        "estimatedTotalFirstHalf": 0,
+        "totalBilledAmount": 0,
+        "streetBetterment": 0,
+        "fine38d": 0,
+        "bidDowntown": 0,
+        "bidGreenway": 0,
+        "bidNewMarket": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,310 @@
+{
+  "result": {
+    "status": "success",
+    "message": "Property details fetched successfully",
+    "data": {
+      "overview": {
+        "fullAddress": "32 Orleans St #3, East Boston, 02128",
+        "owners": [
+          "Munir Mohammad",
+          "Munir Heba"
+        ],
+        "imageSrc": "https://storage.googleapis.com/assessing-properties-prod.firebasestorage.app/static-map-images/0105385006.png?GoogleAccessId=517145664496-compute%40developer.gserviceaccount.com&Expires=1776535527&Signature=PW6ZZO3gs1SKK3c%2FV8NsKiIXXonE54%2FBvov0mRzKNfPSEvxSE0mNzrSCTP%2FNlE31Onjt0kdhrcENuSVH9gfvzRWJM3%2BZGAt1x6NvjNXQC6RBjZaFdeyRB2x4im60s6w4TyXDcM1kqzKWRhsHKWQ1ZACRbfsCjF1ioobAO0aoFzGptOQfTbePh6PsaFilhIrmVTsJnbXVk1xjKDKPTpoAokkUIXwhGL75oHSqrTLZWW47e4awpg7db3kSt92qhKv707qkVvNM1om5FIoAyjKKoaZjhyoT7U2xKQ6fPDKDb%2FLVSGSqsIp0Z8YDGXt7N5qiorF9ck8rv%2B1IvE%2Frdso3Ew%3D%3D",
+        "primaryOwnerInfo": {
+          "owner": "Munir Heba",
+          "mailAddressee": null,
+          "mailStreetAddress": "46 Union Street",
+          "mailCityAndState": "Weymouth MA",
+          "mailZipCode": "02190"
+        },
+        "assessedValue": 495700,
+        "propertyTypeCode": "0102",
+        "propertyTypeDescription": "Residential Property",
+        "landUseCode": "CD",
+        "parcelId": "0105385006",
+        "netTax": 6195.75,
+        "totalBilledAmount": 6195.75,
+        "personalExemptionFlag": false,
+        "residentialExemptionFlag": false,
+        "personalExemptionAmount": 0,
+        "residentialExemptionAmount": 0,
+        "childParcelCount": 0,
+        "masterParcelId": "0105385000"
+      },
+      "propertyValue": {
+        "historicPropertyValues": {
+          "2026": 495700
+        }
+      },
+      "propertyAttributes": {
+        "attributeGroups": [
+          {
+            "title": "Condo Main Attributes",
+            "content": [
+              {
+                "label": "Master Parcel ID",
+                "value": "0105385000"
+              },
+              {
+                "label": "Grade",
+                "value": "Good"
+              },
+              {
+                "label": "Exterior Condition",
+                "value": "Excellent"
+              },
+              {
+                "label": "Exterior Finish",
+                "value": "Cement Board"
+              },
+              {
+                "label": "Foundation",
+                "value": "Brick"
+              },
+              {
+                "label": "Roof Cover",
+                "value": "Rubber Roof"
+              },
+              {
+                "label": "Roof Structure",
+                "value": "Flat"
+              }
+            ]
+          },
+          {
+            "title": "Unit Attributes",
+            "content": [
+              {
+                "title": "General",
+                "content": [
+                  {
+                    "label": "Land Use",
+                    "value": "Residential Condo"
+                  },
+                  {
+                    "label": "Gross Area",
+                    "value": "631 sq ft"
+                  },
+                  {
+                    "label": "Living Area",
+                    "value": "631 sq ft"
+                  },
+                  {
+                    "label": "Lot Size",
+                    "value": "631 sq ft"
+                  },
+                  {
+                    "label": "Style",
+                    "value": "Mid Rise"
+                  },
+                  {
+                    "label": "Story Height",
+                    "value": "1"
+                  },
+                  {
+                    "label": "Floor",
+                    "value": "3"
+                  },
+                  {
+                    "label": "Penthouse Unit",
+                    "value": "0"
+                  },
+                  {
+                    "label": "Orientation",
+                    "value": "T - Through"
+                  },
+                  {
+                    "label": "Corner Unit",
+                    "value": "N - No"
+                  },
+                  {
+                    "label": "View",
+                    "value": "Average"
+                  }
+                ]
+              },
+              {
+                "title": "Rooms",
+                "content": [
+                  {
+                    "label": "Total Rooms",
+                    "value": "2"
+                  },
+                  {
+                    "label": "Number of Bedrooms",
+                    "value": "0"
+                  },
+                  {
+                    "label": "Bedroom Type",
+                    "value": "Average"
+                  },
+                  {
+                    "label": "Total Bathrooms",
+                    "value": "1"
+                  },
+                  {
+                    "label": "Half Bathrooms",
+                    "value": null
+                  },
+                  {
+                    "label": "Other Fixtures",
+                    "value": null
+                  },
+                  {
+                    "label": "Bath Style 1",
+                    "value": "Modern"
+                  },
+                  {
+                    "label": "Bath Style 2",
+                    "value": null
+                  },
+                  {
+                    "label": "Bath Style 3",
+                    "value": null
+                  },
+                  {
+                    "label": "Number of Kitchens",
+                    "value": 1
+                  },
+                  {
+                    "label": "Kitchen Type",
+                    "value": "One Person"
+                  },
+                  {
+                    "label": "Kitchen Style 1",
+                    "value": "Modern"
+                  },
+                  {
+                    "label": "Kitchen Style 2",
+                    "value": null
+                  },
+                  {
+                    "label": "Kitchen Style 3",
+                    "value": null
+                  }
+                ]
+              },
+              {
+                "title": "Construction & Condition",
+                "content": [
+                  {
+                    "label": "Year Built",
+                    "value": 2023
+                  },
+                  {
+                    "label": "Interior Finish",
+                    "value": "Normal"
+                  },
+                  {
+                    "label": "Interior Condition",
+                    "value": "Excellent"
+                  }
+                ]
+              },
+              {
+                "title": "Parking",
+                "content": [
+                  {
+                    "label": "Parking Spots",
+                    "value": "0"
+                  },
+                  {
+                    "label": "Parking Ownership",
+                    "value": "None"
+                  },
+                  {
+                    "label": "Parking Type",
+                    "value": "None"
+                  },
+                  {
+                    "label": "Tandem Parking",
+                    "value": "N"
+                  }
+                ]
+              },
+              {
+                "title": "Utilities",
+                "content": [
+                  {
+                    "label": "Heat Type",
+                    "value": "Forced Hot Air"
+                  },
+                  {
+                    "label": "AC Type",
+                    "value": "Central Ac"
+                  },
+                  {
+                    "label": "Fireplaces",
+                    "value": null
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Outbuildings",
+            "content": [
+              {
+                "title": "Outbuilding 1",
+                "content": [
+                  {
+                    "label": "Type",
+                    "value": "Balcony Sf"
+                  },
+                  {
+                    "label": "Size",
+                    "value": "80 sq ft"
+                  },
+                  {
+                    "label": "Quality",
+                    "value": "Average"
+                  },
+                  {
+                    "label": "Condition",
+                    "value": "Average"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Last Transaction",
+            "content": [
+              {
+                "label": "Sale Price",
+                "value": "$494,000"
+              },
+              {
+                "label": "Sale Date",
+                "value": "September 15, 2025"
+              },
+              {
+                "label": "Registry Book & Page",
+                "value": "71872-303"
+              }
+            ]
+          }
+        ]
+      },
+      "propertyTaxes": {
+        "propertyGrossTax": 6146.68,
+        "residentialExemptionFlag": false,
+        "personalExemptionFlag": false,
+        "residentialExemptionAmount": 0,
+        "personalExemptionAmount": 0,
+        "communityPreservationAmount": 49.07,
+        "propertyNetTax": 6195.75,
+        "parcelId": "0105385006",
+        "personalExemptionAmount1": 0,
+        "personalExemptionAmount2": 0,
+        "estimatedTotalFirstHalf": 6146.68,
+        "totalBilledAmount": 6195.75,
+        "streetBetterment": 0,
+        "fine38d": 0,
+        "bidDowntown": 0,
+        "bidGreenway": 0,
+        "bidNewMarket": 0
+      }
+    }
+  }
+}

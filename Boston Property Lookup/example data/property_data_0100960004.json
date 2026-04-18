@@ -1,0 +1,312 @@
+{
+  "result": {
+    "status": "success",
+    "message": "Property details fetched successfully",
+    "data": {
+      "overview": {
+        "fullAddress": "647 Bennington St #2, East Boston, 02128",
+        "owners": [
+          "Nester Daniel"
+        ],
+        "imageSrc": "https://storage.googleapis.com/assessing-properties-prod.firebasestorage.app/static-map-images/0100960004.png?GoogleAccessId=517145664496-compute%40developer.gserviceaccount.com&Expires=1776535532&Signature=JdVGMh0i0dwgjvIazM0%2BpWHELzyxYYDvUTIL4%2FestnC5M59EfmW2GbJQusiBsA%2FrWFAXyzTsh2bVCE5rA0yuVQ1sPlSj2LilBqPbn0nUhX2u17hjuEOMQRE08OvIxUyDUnMLfyf3ozjS7l2HiFTXji649wwbPLac3MQTAx9Hv%2FggI8jIKtEMvwqXRSUGCxX8wnABT85eCw5vqegakismbdUtNSxN61ztaFfKciXSwJcvXUmYV1WYuNabPp27XKrVBYfuD70VcFzqqNqlZWrCrqi3Pz9y2wzOE0wj2CT4NKrj2j3CMRurgecqK%2BXIHfSjKxnnmEolGYwodWEMdeuJLQ%3D%3D",
+        "primaryOwnerInfo": {
+          "owner": "Nester Daniel",
+          "mailAddressee": null,
+          "mailStreetAddress": "647 Bennington St, Unit 2",
+          "mailCityAndState": "East Boston MA",
+          "mailZipCode": "02128"
+        },
+        "assessedValue": 528400,
+        "propertyTypeCode": "0102",
+        "propertyTypeDescription": "Residential Property",
+        "landUseCode": "CD",
+        "parcelId": "0100960004",
+        "netTax": 2208,
+        "totalBilledAmount": 6561.74,
+        "personalExemptionFlag": false,
+        "residentialExemptionFlag": 1,
+        "personalExemptionAmount": 0,
+        "residentialExemptionAmount": 4353.74,
+        "childParcelCount": 0,
+        "masterParcelId": "0100960000"
+      },
+      "propertyValue": {
+        "historicPropertyValues": {
+          "2023": 524500,
+          "2024": 530100,
+          "2025": 537000,
+          "2026": 528400
+        }
+      },
+      "propertyAttributes": {
+        "attributeGroups": [
+          {
+            "title": "Condo Main Attributes",
+            "content": [
+              {
+                "label": "Master Parcel ID",
+                "value": "0100960000"
+              },
+              {
+                "label": "Grade",
+                "value": "Average"
+              },
+              {
+                "label": "Exterior Condition",
+                "value": "Good"
+              },
+              {
+                "label": "Exterior Finish",
+                "value": "Vinyl"
+              },
+              {
+                "label": "Foundation",
+                "value": "Stone"
+              },
+              {
+                "label": "Roof Cover",
+                "value": "Asphalt Shingl"
+              },
+              {
+                "label": "Roof Structure",
+                "value": "Gable"
+              }
+            ]
+          },
+          {
+            "title": "Unit Attributes",
+            "content": [
+              {
+                "title": "General",
+                "content": [
+                  {
+                    "label": "Land Use",
+                    "value": "Residential Condo"
+                  },
+                  {
+                    "label": "Gross Area",
+                    "value": "1,595 sq ft"
+                  },
+                  {
+                    "label": "Living Area",
+                    "value": "1,595 sq ft"
+                  },
+                  {
+                    "label": "Lot Size",
+                    "value": "1,595 sq ft"
+                  },
+                  {
+                    "label": "Style",
+                    "value": "Free Standing"
+                  },
+                  {
+                    "label": "Story Height",
+                    "value": "2"
+                  },
+                  {
+                    "label": "Floor",
+                    "value": "2"
+                  },
+                  {
+                    "label": "Penthouse Unit",
+                    "value": "0"
+                  },
+                  {
+                    "label": "Orientation",
+                    "value": "T - Through"
+                  },
+                  {
+                    "label": "Corner Unit",
+                    "value": "N - No"
+                  },
+                  {
+                    "label": "View",
+                    "value": "Average"
+                  }
+                ]
+              },
+              {
+                "title": "Rooms",
+                "content": [
+                  {
+                    "label": "Total Rooms",
+                    "value": "7"
+                  },
+                  {
+                    "label": "Number of Bedrooms",
+                    "value": "3"
+                  },
+                  {
+                    "label": "Bedroom Type",
+                    "value": "Average"
+                  },
+                  {
+                    "label": "Total Bathrooms",
+                    "value": "2"
+                  },
+                  {
+                    "label": "Half Bathrooms",
+                    "value": null
+                  },
+                  {
+                    "label": "Other Fixtures",
+                    "value": null
+                  },
+                  {
+                    "label": "Bath Style 1",
+                    "value": "Modern"
+                  },
+                  {
+                    "label": "Bath Style 2",
+                    "value": "Modern"
+                  },
+                  {
+                    "label": "Bath Style 3",
+                    "value": null
+                  },
+                  {
+                    "label": "Number of Kitchens",
+                    "value": 1
+                  },
+                  {
+                    "label": "Kitchen Type",
+                    "value": "One Person"
+                  },
+                  {
+                    "label": "Kitchen Style 1",
+                    "value": "Modern"
+                  },
+                  {
+                    "label": "Kitchen Style 2",
+                    "value": null
+                  },
+                  {
+                    "label": "Kitchen Style 3",
+                    "value": null
+                  }
+                ]
+              },
+              {
+                "title": "Construction & Condition",
+                "content": [
+                  {
+                    "label": "Year Built",
+                    "value": 2021
+                  },
+                  {
+                    "label": "Interior Finish",
+                    "value": "Normal"
+                  },
+                  {
+                    "label": "Interior Condition",
+                    "value": "Good"
+                  }
+                ]
+              },
+              {
+                "title": "Parking",
+                "content": [
+                  {
+                    "label": "Parking Spots",
+                    "value": "2"
+                  },
+                  {
+                    "label": "Parking Ownership",
+                    "value": "Deeded"
+                  },
+                  {
+                    "label": "Parking Type",
+                    "value": "Open"
+                  },
+                  {
+                    "label": "Tandem Parking",
+                    "value": "Y"
+                  }
+                ]
+              },
+              {
+                "title": "Utilities",
+                "content": [
+                  {
+                    "label": "Heat Type",
+                    "value": "Ht Water/Steam"
+                  },
+                  {
+                    "label": "AC Type",
+                    "value": "Ductless Ac"
+                  },
+                  {
+                    "label": "Fireplaces",
+                    "value": null
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Outbuildings",
+            "content": [
+              {
+                "title": "Outbuilding 1",
+                "content": [
+                  {
+                    "label": "Type",
+                    "value": "Aux Laundry Count"
+                  },
+                  {
+                    "label": "Size",
+                    "value": "1 sq ft"
+                  },
+                  {
+                    "label": "Quality",
+                    "value": "Average"
+                  },
+                  {
+                    "label": "Condition",
+                    "value": "Average"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Last Transaction",
+            "content": [
+              {
+                "label": "Sale Price",
+                "value": "$550,000"
+              },
+              {
+                "label": "Sale Date",
+                "value": "March 4, 2022"
+              },
+              {
+                "label": "Registry Book & Page",
+                "value": "931709"
+              }
+            ]
+          }
+        ]
+      },
+      "propertyTaxes": {
+        "propertyGrossTax": 6552.16,
+        "residentialExemptionFlag": 1,
+        "personalExemptionFlag": false,
+        "residentialExemptionAmount": 4353.74,
+        "personalExemptionAmount": 0,
+        "communityPreservationAmount": 9.58,
+        "propertyNetTax": 2208,
+        "parcelId": "0100960004",
+        "personalExemptionAmount1": 0,
+        "personalExemptionAmount2": 0,
+        "estimatedTotalFirstHalf": 2198.42,
+        "totalBilledAmount": 6561.74,
+        "streetBetterment": 0,
+        "fine38d": 0,
+        "bidDowntown": 0,
+        "bidGreenway": 0,
+        "bidNewMarket": 0
+      }
+    }
+  }
+}

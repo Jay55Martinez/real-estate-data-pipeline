@@ -1,0 +1,282 @@
+{
+  "result": {
+    "status": "success",
+    "message": "Property details fetched successfully",
+    "data": {
+      "overview": {
+        "fullAddress": "83 Homer St, East Boston, 02128",
+        "owners": [
+          "Madrigal Alba",
+          "Homer Street Realty Condominium Trust"
+        ],
+        "imageSrc": "https://storage.googleapis.com/assessing-properties-prod.firebasestorage.app/static-map-images/0101187001.png?GoogleAccessId=517145664496-compute%40developer.gserviceaccount.com&Expires=1776535564&Signature=nv7%2B6y67mvBDGujUi2EkztPUV6bQqocUECRkZ0%2BvGRjOMVgVJ7QZOc5E%2Fqi0fh3UBNGL4kxZSQnZJdj0JozbjobYwazyOuCInJXFeB2qagbAgxWDqJDzCQ9REsODMUNl8Ij%2F2RpdlvA%2BDPAMYR5pGpXvVzdz7m8BTtEoG5wE0XlBTNHRawG38pSqvkRckEoAiVuW0BrwnWJrKK5EAnOCz7%2BpGJfz1y%2BS992EX74rtz1bSCkCpi0acnT8rnHehdfKnSiw9DAXlvWgfUWhxAlnOU8TcI5KW6aI%2Bofo9KoI8gab4H6d3uBVaopf9XYnlzHY9zC4SNqXV4VKfS1r0%2Fvdfw%3D%3D",
+        "primaryOwnerInfo": {
+          "owner": "Homer Street Realty Condominium Trust",
+          "mailAddressee": "83 Homer St",
+          "mailStreetAddress": "C/O Alba Madrigal",
+          "mailCityAndState": "East Boston MA",
+          "mailZipCode": "02128"
+        },
+        "assessedValue": 0,
+        "propertyTypeCode": "0995",
+        "propertyTypeDescription": "Exempt Property Type",
+        "landUseCode": "CM",
+        "parcelId": "0101187001",
+        "netTax": 0,
+        "totalBilledAmount": 0,
+        "personalExemptionFlag": false,
+        "residentialExemptionFlag": false,
+        "personalExemptionAmount": 0,
+        "residentialExemptionAmount": 0,
+        "childParcelCount": 3,
+        "masterParcelId": null
+      },
+      "propertyValue": {
+        "historicPropertyValues": {
+          "1985": 73900,
+          "1986": 73700,
+          "1987": 93700,
+          "1988": 118000,
+          "1989": 201000,
+          "1990": 201000,
+          "1991": 201000,
+          "1992": 183300,
+          "1993": 142300,
+          "1994": 132400,
+          "1995": 130000,
+          "1996": 132700,
+          "1997": 127400,
+          "1998": 143200,
+          "1999": 148900,
+          "2000": 157900,
+          "2001": 229600,
+          "2002": 257600,
+          "2003": 279600,
+          "2004": 389800,
+          "2005": 421100,
+          "2006": 461200,
+          "2007": 0,
+          "2008": 0,
+          "2009": 0,
+          "2010": 0,
+          "2011": 0,
+          "2012": 0,
+          "2013": 0,
+          "2014": 0,
+          "2015": 0,
+          "2016": 0,
+          "2017": 0,
+          "2018": 0,
+          "2019": 0,
+          "2020": 0,
+          "2021": 0,
+          "2022": 0,
+          "2023": 0,
+          "2024": 0,
+          "2025": 0,
+          "2026": 0
+        }
+      },
+      "propertyAttributes": {
+        "attributeGroups": [
+          {
+            "title": "General",
+            "content": [
+              {
+                "label": "Land Use",
+                "value": "CM"
+              },
+              {
+                "label": "Gross Area",
+                "value": null
+              },
+              {
+                "label": "Living Area",
+                "value": null
+              },
+              {
+                "label": "Lot Size",
+                "value": "3,700 sq ft"
+              },
+              {
+                "label": "Style",
+                "value": "Not available"
+              },
+              {
+                "label": "Story Height",
+                "value": "Not available"
+              },
+              {
+                "label": "Floor",
+                "value": null
+              },
+              {
+                "label": "Penthouse Unit",
+                "value": null
+              },
+              {
+                "label": "Orientation",
+                "value": null
+              },
+              {
+                "label": "View",
+                "value": null
+              },
+              {
+                "label": "Grade",
+                "value": null
+              }
+            ]
+          },
+          {
+            "title": "Rooms",
+            "content": [
+              {
+                "label": "Number of Bedrooms",
+                "value": null
+              },
+              {
+                "label": "Total Bathrooms",
+                "value": null
+              },
+              {
+                "label": "Half Bathrooms",
+                "value": null
+              },
+              {
+                "label": "Other Fixtures",
+                "value": null
+              },
+              {
+                "label": "Bath Style 1",
+                "value": null
+              },
+              {
+                "label": "Bath Style 2",
+                "value": null
+              },
+              {
+                "label": "Bath Style 3",
+                "value": null
+              },
+              {
+                "label": "Number of Kitchens",
+                "value": null
+              },
+              {
+                "label": "Kitchen Type",
+                "value": null
+              },
+              {
+                "label": "Kitchen Style 1",
+                "value": null
+              },
+              {
+                "label": "Kitchen Style 2",
+                "value": null
+              },
+              {
+                "label": "Kitchen Style 3",
+                "value": null
+              }
+            ]
+          },
+          {
+            "title": "Construction & Condition",
+            "content": [
+              {
+                "label": "Year Built",
+                "value": null
+              },
+              {
+                "label": "Exterior Finish",
+                "value": null
+              },
+              {
+                "label": "Exterior Condition",
+                "value": null
+              },
+              {
+                "label": "Interior Finish",
+                "value": null
+              },
+              {
+                "label": "Interior Condition",
+                "value": null
+              },
+              {
+                "label": "Roof Cover",
+                "value": null
+              },
+              {
+                "label": "Roof Structure",
+                "value": null
+              },
+              {
+                "label": "Foundation",
+                "value": "Not available"
+              },
+              {
+                "label": "Parking Spots",
+                "value": null
+              }
+            ]
+          },
+          {
+            "title": "Utilities",
+            "content": [
+              {
+                "label": "Heat Type",
+                "value": null
+              },
+              {
+                "label": "AC Type",
+                "value": null
+              },
+              {
+                "label": "Fireplaces",
+                "value": null
+              }
+            ]
+          },
+          {
+            "title": "Last Transaction",
+            "content": [
+              {
+                "label": "Sale Price",
+                "value": null
+              },
+              {
+                "label": "Sale Date",
+                "value": "January 31, 2005"
+              },
+              {
+                "label": "Registry Book & Page",
+                "value": "36389-026"
+              }
+            ]
+          }
+        ]
+      },
+      "propertyTaxes": {
+        "propertyGrossTax": 0,
+        "residentialExemptionFlag": false,
+        "personalExemptionFlag": false,
+        "residentialExemptionAmount": 0,
+        "personalExemptionAmount": 0,
+        "communityPreservationAmount": 0,
+        "propertyNetTax": 0,
+        "parcelId": "0101187001",
+        "personalExemptionAmount1": 0,
+        "personalExemptionAmount2": 0,
+        "estimatedTotalFirstHalf": 0,
+        "totalBilledAmount": 0,
+        "streetBetterment": 0,
+        "fine38d": 0,
+        "bidDowntown": 0,
+        "bidGreenway": 0,
+        "bidNewMarket": 0
+      }
+    }
+  }
+}

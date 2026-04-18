@@ -1,0 +1,336 @@
+{
+  "result": {
+    "status": "success",
+    "message": "Property details fetched successfully",
+    "data": {
+      "overview": {
+        "fullAddress": "19 Chelsea St #2, East Boston, 02128",
+        "owners": [
+          "Nohelty Alexander"
+        ],
+        "imageSrc": "https://storage.googleapis.com/assessing-properties-prod.firebasestorage.app/static-map-images/0103877004.png?GoogleAccessId=517145664496-compute%40developer.gserviceaccount.com&Expires=1776535535&Signature=lj8ZMZ%2F3FKknXt5I1G9OhUlcZ3UCH5%2FP%2FrC%2BaEW1ZVgXht6L%2Fk%2BiXMVYMmIj%2B%2FjQfQYkHi3mAADM3y2hMJEd4UL%2FAtc%2FpE%2Bs%2FAfWYr%2FifjtKc0r6YRNnXa%2BJtA8nibotFK034X1hedV2HKFQ01OGG6uu2Vb5mss8HVFH%2FMwrjAO60lhjI1xz%2BBUn3IlxQqRgff1dRXfSDPjXLMCINzYA5tLiJaLTO%2B2Hs79HvXp%2F3www8pzz0kXYdVDa%2Bex%2BE0Dh2LhVFt2LtkPPu4MxVifjkmyRk1YxmnCDFt7%2FGZh8rXI%2Fw8R9bIg7awM0EYjBRo3%2BQPaa2MqoHcqaSnFGFYePXg%3D%3D",
+        "primaryOwnerInfo": {
+          "owner": "Nohelty Alexander",
+          "mailAddressee": null,
+          "mailStreetAddress": "19 Chelsea Street #2",
+          "mailCityAndState": "East Boston MA",
+          "mailZipCode": "02128"
+        },
+        "assessedValue": 529300,
+        "propertyTypeCode": "0102",
+        "propertyTypeDescription": "Residential Property",
+        "landUseCode": "CD",
+        "parcelId": "0103877004",
+        "netTax": 2219.2799999999997,
+        "totalBilledAmount": 6573.0199999999995,
+        "personalExemptionFlag": false,
+        "residentialExemptionFlag": 1,
+        "personalExemptionAmount": 0,
+        "residentialExemptionAmount": 4353.74,
+        "childParcelCount": 0,
+        "masterParcelId": "0103877000"
+      },
+      "propertyValue": {
+        "historicPropertyValues": {
+          "2020": 438000,
+          "2021": 500100,
+          "2022": 510100,
+          "2023": 525600,
+          "2024": 531100,
+          "2025": 529300,
+          "2026": 529300
+        }
+      },
+      "propertyAttributes": {
+        "attributeGroups": [
+          {
+            "title": "Condo Main Attributes",
+            "content": [
+              {
+                "label": "Master Parcel ID",
+                "value": "0103877000"
+              },
+              {
+                "label": "Grade",
+                "value": "Good"
+              },
+              {
+                "label": "Exterior Condition",
+                "value": "Good"
+              },
+              {
+                "label": "Exterior Finish",
+                "value": "Brick/Stone"
+              },
+              {
+                "label": "Foundation",
+                "value": "Concrete"
+              },
+              {
+                "label": "Roof Cover",
+                "value": "Rubber Roof"
+              },
+              {
+                "label": "Roof Structure",
+                "value": "Flat"
+              }
+            ]
+          },
+          {
+            "title": "Unit Attributes",
+            "content": [
+              {
+                "title": "General",
+                "content": [
+                  {
+                    "label": "Land Use",
+                    "value": "Residential Condo"
+                  },
+                  {
+                    "label": "Gross Area",
+                    "value": "877 sq ft"
+                  },
+                  {
+                    "label": "Living Area",
+                    "value": "877 sq ft"
+                  },
+                  {
+                    "label": "Lot Size",
+                    "value": "877 sq ft"
+                  },
+                  {
+                    "label": "Style",
+                    "value": "Row Middle"
+                  },
+                  {
+                    "label": "Story Height",
+                    "value": "1"
+                  },
+                  {
+                    "label": "Floor",
+                    "value": "2"
+                  },
+                  {
+                    "label": "Penthouse Unit",
+                    "value": "0"
+                  },
+                  {
+                    "label": "Orientation",
+                    "value": "T - Through"
+                  },
+                  {
+                    "label": "Corner Unit",
+                    "value": "N - No"
+                  },
+                  {
+                    "label": "View",
+                    "value": "Average"
+                  }
+                ]
+              },
+              {
+                "title": "Rooms",
+                "content": [
+                  {
+                    "label": "Total Rooms",
+                    "value": "4"
+                  },
+                  {
+                    "label": "Number of Bedrooms",
+                    "value": "2"
+                  },
+                  {
+                    "label": "Bedroom Type",
+                    "value": "Average"
+                  },
+                  {
+                    "label": "Total Bathrooms",
+                    "value": "2"
+                  },
+                  {
+                    "label": "Half Bathrooms",
+                    "value": null
+                  },
+                  {
+                    "label": "Other Fixtures",
+                    "value": null
+                  },
+                  {
+                    "label": "Bath Style 1",
+                    "value": "Modern"
+                  },
+                  {
+                    "label": "Bath Style 2",
+                    "value": "Modern"
+                  },
+                  {
+                    "label": "Bath Style 3",
+                    "value": null
+                  },
+                  {
+                    "label": "Number of Kitchens",
+                    "value": 1
+                  },
+                  {
+                    "label": "Kitchen Type",
+                    "value": "One Person"
+                  },
+                  {
+                    "label": "Kitchen Style 1",
+                    "value": "Modern"
+                  },
+                  {
+                    "label": "Kitchen Style 2",
+                    "value": null
+                  },
+                  {
+                    "label": "Kitchen Style 3",
+                    "value": null
+                  }
+                ]
+              },
+              {
+                "title": "Construction & Condition",
+                "content": [
+                  {
+                    "label": "Year Built",
+                    "value": 1899
+                  },
+                  {
+                    "label": "Interior Finish",
+                    "value": "Normal"
+                  },
+                  {
+                    "label": "Interior Condition",
+                    "value": "Good"
+                  }
+                ]
+              },
+              {
+                "title": "Parking",
+                "content": [
+                  {
+                    "label": "Parking Spots",
+                    "value": "0"
+                  },
+                  {
+                    "label": "Parking Ownership",
+                    "value": "None"
+                  },
+                  {
+                    "label": "Parking Type",
+                    "value": "None"
+                  },
+                  {
+                    "label": "Tandem Parking",
+                    "value": "N"
+                  }
+                ]
+              },
+              {
+                "title": "Utilities",
+                "content": [
+                  {
+                    "label": "Heat Type",
+                    "value": "Forced Hot Air"
+                  },
+                  {
+                    "label": "AC Type",
+                    "value": "Central Ac"
+                  },
+                  {
+                    "label": "Fireplaces",
+                    "value": null
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Outbuildings",
+            "content": [
+              {
+                "title": "Outbuilding 1",
+                "content": [
+                  {
+                    "label": "Type",
+                    "value": "Balcony Area"
+                  },
+                  {
+                    "label": "Size",
+                    "value": "39 sq ft"
+                  },
+                  {
+                    "label": "Quality",
+                    "value": "Average"
+                  },
+                  {
+                    "label": "Condition",
+                    "value": "Average"
+                  }
+                ]
+              },
+              {
+                "title": "Outbuilding 2",
+                "content": [
+                  {
+                    "label": "Type",
+                    "value": "Aux Laundry Count"
+                  },
+                  {
+                    "label": "Size",
+                    "value": "1 sq ft"
+                  },
+                  {
+                    "label": "Quality",
+                    "value": "Average"
+                  },
+                  {
+                    "label": "Condition",
+                    "value": "Average"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Last Transaction",
+            "content": [
+              {
+                "label": "Sale Price",
+                "value": "$645,000"
+              },
+              {
+                "label": "Sale Date",
+                "value": "May 30, 2025"
+              },
+              {
+                "label": "Registry Book & Page",
+                "value": "71461-235"
+              }
+            ]
+          }
+        ]
+      },
+      "propertyTaxes": {
+        "propertyGrossTax": 6563.32,
+        "residentialExemptionFlag": 1,
+        "personalExemptionFlag": false,
+        "residentialExemptionAmount": 4353.74,
+        "personalExemptionAmount": 0,
+        "communityPreservationAmount": 9.7,
+        "propertyNetTax": 2219.2799999999997,
+        "parcelId": "0103877004",
+        "personalExemptionAmount1": 0,
+        "personalExemptionAmount2": 0,
+        "estimatedTotalFirstHalf": 2209.58,
+        "totalBilledAmount": 6573.0199999999995,
+        "streetBetterment": 0,
+        "fine38d": 0,
+        "bidDowntown": 0,
+        "bidGreenway": 0,
+        "bidNewMarket": 0
+      }
+    }
+  }
+}

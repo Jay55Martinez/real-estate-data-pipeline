@@ -1,0 +1,281 @@
+{
+  "result": {
+    "status": "success",
+    "message": "Property details fetched successfully",
+    "data": {
+      "overview": {
+        "fullAddress": "Bennington St, East Boston, 02128",
+        "owners": [
+          "Barisano Robert P"
+        ],
+        "imageSrc": "https://storage.googleapis.com/assessing-properties-prod.firebasestorage.app/static-map-images/0100418000.png?GoogleAccessId=517145664496-compute%40developer.gserviceaccount.com&Expires=1776535530&Signature=ElFY9zvcrDyEtp%2BUtraNMA1K4lj607wABkhS35afdalJJlgzb5j8QaRT8wCLP6trUFdLYzIOcshXeqFptu47Vgf9Ct9NouB4SAIvOqjqPCDF5ZbaNx6%2BuC13XkGmWGctEGXegQ%2FvCpt3LTy%2FzgqpOPSnxG9wW8K1%2FvG5IhztI0tjmKBbrWAUDOqNMRhX%2BpMwFav8UYN4k0sTkRlu7hqH%2FnpuMqsRYgZBhXMWs83DoGsewBISb4Z2kUd4f1PTp%2F8zNXEAmCI0k4MoQZyGho3zmTxx%2FqvFWzmdSsp7NyQTb7DxR1yEMlmDUqfaf52XJ1fV6YT1%2F8qlRJGUxPbJ%2FIK5Bg%3D%3D",
+        "primaryOwnerInfo": {
+          "owner": "Barisano Robert P",
+          "mailAddressee": null,
+          "mailStreetAddress": "97 Beachview Rd",
+          "mailCityAndState": "East Boston MA",
+          "mailZipCode": "02128"
+        },
+        "assessedValue": 58200,
+        "propertyTypeCode": "0132",
+        "propertyTypeDescription": "Other Residential",
+        "landUseCode": "RL",
+        "parcelId": "0100418000",
+        "netTax": 721.68,
+        "totalBilledAmount": 721.68,
+        "personalExemptionFlag": false,
+        "residentialExemptionFlag": false,
+        "personalExemptionAmount": 0,
+        "residentialExemptionAmount": 0,
+        "childParcelCount": 0,
+        "masterParcelId": null
+      },
+      "propertyValue": {
+        "historicPropertyValues": {
+          "1985": 6800,
+          "1986": 12100,
+          "1987": 14900,
+          "1988": 19000,
+          "1989": 34400,
+          "1990": 34400,
+          "1991": 34400,
+          "1992": 10200,
+          "1993": 9400,
+          "1994": 9400,
+          "1995": 9400,
+          "1996": 9400,
+          "1997": 9400,
+          "1998": 9400,
+          "1999": 9400,
+          "2000": 9400,
+          "2001": 12200,
+          "2002": 12200,
+          "2003": 12200,
+          "2004": 15900,
+          "2005": 15900,
+          "2006": 15900,
+          "2007": 36400,
+          "2008": 36400,
+          "2009": 36400,
+          "2010": 30400,
+          "2011": 30400,
+          "2012": 30400,
+          "2013": 25200,
+          "2014": 25200,
+          "2015": 28200,
+          "2016": 31100,
+          "2017": 33000,
+          "2018": 33600,
+          "2019": 34500,
+          "2020": 36600,
+          "2021": 43400,
+          "2022": 44700,
+          "2023": 46900,
+          "2024": 48300,
+          "2025": 57100,
+          "2026": 58200
+        }
+      },
+      "propertyAttributes": {
+        "attributeGroups": [
+          {
+            "title": "General",
+            "content": [
+              {
+                "label": "Land Use",
+                "value": "RL"
+              },
+              {
+                "label": "Gross Area",
+                "value": null
+              },
+              {
+                "label": "Living Area",
+                "value": null
+              },
+              {
+                "label": "Lot Size",
+                "value": "2,537 sq ft"
+              },
+              {
+                "label": "Style",
+                "value": "Not available"
+              },
+              {
+                "label": "Story Height",
+                "value": "Not available"
+              },
+              {
+                "label": "Floor",
+                "value": null
+              },
+              {
+                "label": "Penthouse Unit",
+                "value": null
+              },
+              {
+                "label": "Orientation",
+                "value": null
+              },
+              {
+                "label": "View",
+                "value": null
+              },
+              {
+                "label": "Grade",
+                "value": null
+              }
+            ]
+          },
+          {
+            "title": "Rooms",
+            "content": [
+              {
+                "label": "Number of Bedrooms",
+                "value": null
+              },
+              {
+                "label": "Total Bathrooms",
+                "value": null
+              },
+              {
+                "label": "Half Bathrooms",
+                "value": null
+              },
+              {
+                "label": "Other Fixtures",
+                "value": null
+              },
+              {
+                "label": "Bath Style 1",
+                "value": null
+              },
+              {
+                "label": "Bath Style 2",
+                "value": null
+              },
+              {
+                "label": "Bath Style 3",
+                "value": null
+              },
+              {
+                "label": "Number of Kitchens",
+                "value": null
+              },
+              {
+                "label": "Kitchen Type",
+                "value": null
+              },
+              {
+                "label": "Kitchen Style 1",
+                "value": null
+              },
+              {
+                "label": "Kitchen Style 2",
+                "value": null
+              },
+              {
+                "label": "Kitchen Style 3",
+                "value": null
+              }
+            ]
+          },
+          {
+            "title": "Construction & Condition",
+            "content": [
+              {
+                "label": "Year Built",
+                "value": null
+              },
+              {
+                "label": "Exterior Finish",
+                "value": null
+              },
+              {
+                "label": "Exterior Condition",
+                "value": null
+              },
+              {
+                "label": "Interior Finish",
+                "value": null
+              },
+              {
+                "label": "Interior Condition",
+                "value": null
+              },
+              {
+                "label": "Roof Cover",
+                "value": null
+              },
+              {
+                "label": "Roof Structure",
+                "value": null
+              },
+              {
+                "label": "Foundation",
+                "value": "Not available"
+              },
+              {
+                "label": "Parking Spots",
+                "value": null
+              }
+            ]
+          },
+          {
+            "title": "Utilities",
+            "content": [
+              {
+                "label": "Heat Type",
+                "value": null
+              },
+              {
+                "label": "AC Type",
+                "value": null
+              },
+              {
+                "label": "Fireplaces",
+                "value": null
+              }
+            ]
+          },
+          {
+            "title": "Last Transaction",
+            "content": [
+              {
+                "label": "Sale Price",
+                "value": "$9"
+              },
+              {
+                "label": "Sale Date",
+                "value": "October 30, 2018"
+              },
+              {
+                "label": "Registry Book & Page",
+                "value": "60348-136"
+              }
+            ]
+          }
+        ]
+      },
+      "propertyTaxes": {
+        "propertyGrossTax": 721.68,
+        "residentialExemptionFlag": false,
+        "personalExemptionFlag": false,
+        "residentialExemptionAmount": 0,
+        "personalExemptionAmount": 0,
+        "communityPreservationAmount": 0,
+        "propertyNetTax": 721.68,
+        "parcelId": "0100418000",
+        "personalExemptionAmount1": 0,
+        "personalExemptionAmount2": 0,
+        "estimatedTotalFirstHalf": 721.68,
+        "totalBilledAmount": 721.68,
+        "streetBetterment": 0,
+        "fine38d": 0,
+        "bidDowntown": 0,
+        "bidGreenway": 0,
+        "bidNewMarket": 0
+      }
+    }
+  }
+}

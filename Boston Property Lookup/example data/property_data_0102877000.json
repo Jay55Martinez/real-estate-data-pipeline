@@ -1,0 +1,307 @@
+{
+  "result": {
+    "status": "success",
+    "message": "Property details fetched successfully",
+    "data": {
+      "overview": {
+        "fullAddress": "85 Trenton St, East Boston, 02128",
+        "owners": [
+          "Buenrrostro Jose"
+        ],
+        "imageSrc": "https://storage.googleapis.com/assessing-properties-prod.firebasestorage.app/static-map-images/0102877000.png?GoogleAccessId=517145664496-compute%40developer.gserviceaccount.com&Expires=1776535576&Signature=Vbv3ikHLXRhH4wVRKitHGFj0KmkN3d8V3aWucfQeSyFxC6pj%2FjvdB1Lo%2BAcbgQlYZ6X9xLytYEeKtRokPF9IWeJkFOz%2B7UDCbJb47vN0e0%2FPFKLt5dXj3NOMBqtqadGaYtO%2BXzOhB8Dl%2F2v7EPVglhFVwewm64XFc3Qk0rvdhyMr5eQRktkxRnRNkejqj57v1VI50DjOr9Ai%2Ft8qgzZ1I4HbodAi1Hssdr37nvpyONAGpEsjM4yxcPr%2FvU2Mlj%2FuglxGSaFstwq7FE1odlbGaQbkKoy0%2FtdUk7Ktd09uGcnvJuHMKR3dHz6zMrgfXjs%2F2ehZpuSD%2F3ovJ1Ahgoemjg%3D%3D",
+        "primaryOwnerInfo": {
+          "owner": "Buenrrostro Jose",
+          "mailAddressee": null,
+          "mailStreetAddress": "85 Trenton St",
+          "mailCityAndState": "East Boston MA",
+          "mailZipCode": "02128"
+        },
+        "assessedValue": 1218300,
+        "propertyTypeCode": "0105",
+        "propertyTypeDescription": "Residential Property",
+        "landUseCode": "R3",
+        "parcelId": "0102877000",
+        "netTax": 15245.59,
+        "totalBilledAmount": 15245.59,
+        "personalExemptionFlag": false,
+        "residentialExemptionFlag": false,
+        "personalExemptionAmount": 0,
+        "residentialExemptionAmount": 0,
+        "childParcelCount": 0,
+        "masterParcelId": null
+      },
+      "propertyValue": {
+        "historicPropertyValues": {
+          "1985": 50500,
+          "1986": 77800,
+          "1987": 93400,
+          "1988": 117600,
+          "1989": 159500,
+          "1990": 159500,
+          "1991": 159500,
+          "1992": 147400,
+          "1993": 118400,
+          "1994": 110100,
+          "1995": 104100,
+          "1996": 108400,
+          "1997": 127400,
+          "1998": 123000,
+          "1999": 131400,
+          "2000": 138600,
+          "2001": 214000,
+          "2002": 239800,
+          "2003": 304400,
+          "2004": 343600,
+          "2005": 391000,
+          "2006": 419100,
+          "2007": 565800,
+          "2008": 553700,
+          "2009": 409600,
+          "2010": 364400,
+          "2011": 342600,
+          "2012": 342600,
+          "2013": 353000,
+          "2014": 381300,
+          "2015": 438500,
+          "2016": 492400,
+          "2017": 568300,
+          "2018": 653800,
+          "2019": 732300,
+          "2020": 820400,
+          "2021": 1076500,
+          "2022": 1076500,
+          "2023": 1173400,
+          "2024": 1185200,
+          "2025": 1182800,
+          "2026": 1218300
+        }
+      },
+      "propertyAttributes": {
+        "attributeGroups": [
+          {
+            "title": "General",
+            "content": [
+              {
+                "label": "Land Use",
+                "value": "Three-Fam Dwelling"
+              },
+              {
+                "label": "Gross Area",
+                "value": "9,097 sq ft"
+              },
+              {
+                "label": "Living Area",
+                "value": "6,076.8 sq ft"
+              },
+              {
+                "label": "Lot Size",
+                "value": "3,750 sq ft"
+              },
+              {
+                "label": "Style",
+                "value": "Conventional"
+              },
+              {
+                "label": "Story Height",
+                "value": "3"
+              },
+              {
+                "label": "Floor",
+                "value": null
+              },
+              {
+                "label": "Penthouse Unit",
+                "value": null
+              },
+              {
+                "label": "Orientation",
+                "value": null
+              },
+              {
+                "label": "View",
+                "value": "Average"
+              },
+              {
+                "label": "Grade",
+                "value": "Average"
+              }
+            ]
+          },
+          {
+            "title": "Rooms",
+            "content": [
+              {
+                "label": "Number of Bedrooms",
+                "value": 6
+              },
+              {
+                "label": "Total Bathrooms",
+                "value": "3"
+              },
+              {
+                "label": "Half Bathrooms",
+                "value": null
+              },
+              {
+                "label": "Other Fixtures",
+                "value": null
+              },
+              {
+                "label": "Bath Style 1",
+                "value": "Semi-Modern"
+              },
+              {
+                "label": "Bath Style 2",
+                "value": "Semi-Modern"
+              },
+              {
+                "label": "Bath Style 3",
+                "value": "Semi-Modern"
+              },
+              {
+                "label": "Number of Kitchens",
+                "value": 3
+              },
+              {
+                "label": "Kitchen Type",
+                "value": "3 Full Eat In Kitchens"
+              },
+              {
+                "label": "Kitchen Style 1",
+                "value": "Semi-Modern"
+              },
+              {
+                "label": "Kitchen Style 2",
+                "value": "Semi-Modern"
+              },
+              {
+                "label": "Kitchen Style 3",
+                "value": "Semi-Modern"
+              }
+            ]
+          },
+          {
+            "title": "Construction & Condition",
+            "content": [
+              {
+                "label": "Year Built",
+                "value": 1900
+              },
+              {
+                "label": "Exterior Finish",
+                "value": "Vinyl"
+              },
+              {
+                "label": "Exterior Condition",
+                "value": "Average"
+              },
+              {
+                "label": "Interior Finish",
+                "value": "Normal"
+              },
+              {
+                "label": "Interior Condition",
+                "value": "Average"
+              },
+              {
+                "label": "Roof Cover",
+                "value": "Asphalt Shingl"
+              },
+              {
+                "label": "Roof Structure",
+                "value": "Gambrel"
+              },
+              {
+                "label": "Foundation",
+                "value": "Stone"
+              },
+              {
+                "label": "Parking Spots",
+                "value": null
+              }
+            ]
+          },
+          {
+            "title": "Utilities",
+            "content": [
+              {
+                "label": "Heat Type",
+                "value": "Ht Water/Steam"
+              },
+              {
+                "label": "AC Type",
+                "value": "None"
+              },
+              {
+                "label": "Fireplaces",
+                "value": null
+              }
+            ]
+          },
+          {
+            "title": "Outbuildings",
+            "content": [
+              {
+                "title": "Outbuilding 1",
+                "content": [
+                  {
+                    "label": "Type",
+                    "value": "Deck/Patio Sf"
+                  },
+                  {
+                    "label": "Size",
+                    "value": "273 sq ft"
+                  },
+                  {
+                    "label": "Quality",
+                    "value": "Average"
+                  },
+                  {
+                    "label": "Condition",
+                    "value": "Average"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Last Transaction",
+            "content": [
+              {
+                "label": "Sale Price",
+                "value": "$360,500"
+              },
+              {
+                "label": "Sale Date",
+                "value": "September 15, 2003"
+              },
+              {
+                "label": "Registry Book & Page",
+                "value": "32766-207"
+              }
+            ]
+          }
+        ]
+      },
+      "propertyTaxes": {
+        "propertyGrossTax": 15106.92,
+        "residentialExemptionFlag": false,
+        "personalExemptionFlag": false,
+        "residentialExemptionAmount": 0,
+        "personalExemptionAmount": 0,
+        "communityPreservationAmount": 138.67,
+        "propertyNetTax": 15245.59,
+        "parcelId": "0102877000",
+        "personalExemptionAmount1": 0,
+        "personalExemptionAmount2": 0,
+        "estimatedTotalFirstHalf": 15106.92,
+        "totalBilledAmount": 15245.59,
+        "streetBetterment": 0,
+        "fine38d": 0,
+        "bidDowntown": 0,
+        "bidGreenway": 0,
+        "bidNewMarket": 0
+      }
+    }
+  }
+}

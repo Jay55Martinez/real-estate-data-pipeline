@@ -1,0 +1,329 @@
+{
+  "result": {
+    "status": "success",
+    "message": "Property details fetched successfully",
+    "data": {
+      "overview": {
+        "fullAddress": "6 Horace St, East Boston, 02128",
+        "owners": [
+          "Schirripa Rocco",
+          "6 Horace Street Realty Trust"
+        ],
+        "imageSrc": "https://storage.googleapis.com/assessing-properties-prod.firebasestorage.app/static-map-images/0100873004.png?GoogleAccessId=517145664496-compute%40developer.gserviceaccount.com&Expires=1776535551&Signature=FwVA2SLIjOxDLYXL%2B72fECyZC0E89pGgDPNE%2FxgBFEO6Zm5aSB3XltG1YjSWyTGd%2BRJmop7jeSV5ijl5mdyqwbcxDn3U0%2BpN5km4cIC%2FEAH2tueNiFclbwoGQX3wIUWxU3CrCI5O3UNL16kb1pZcqyLTk5WvrMWXbuz46zafyjW0iT2VqWySsR4GmfHsp0exa3AUVJLoIdH57Es5lCfw0I7ISqfmd%2FbK68TxlAdElAydCxqiogCpa04d%2FF4MVlYzvBEhB06Gih6qLsmo%2BlxFnl9klPLdfdaKkNX%2FMjSB0AfDcz3KtcoWgifvKfU4R7WMCIzHPgfc4LUh6uW3SJSlkw%3D%3D",
+        "primaryOwnerInfo": {
+          "owner": "6 Horace Street Realty Trust",
+          "mailAddressee": null,
+          "mailStreetAddress": "14 Sarahs Wy",
+          "mailCityAndState": "Peabody MA",
+          "mailZipCode": "01960"
+        },
+        "assessedValue": 1172500,
+        "propertyTypeCode": "0105",
+        "propertyTypeDescription": "Residential Property",
+        "landUseCode": "R3",
+        "parcelId": "0100873004",
+        "netTax": 14671.99,
+        "totalBilledAmount": 14671.99,
+        "personalExemptionFlag": false,
+        "residentialExemptionFlag": false,
+        "personalExemptionAmount": 0,
+        "residentialExemptionAmount": 0,
+        "childParcelCount": 0,
+        "masterParcelId": null
+      },
+      "propertyValue": {
+        "historicPropertyValues": {
+          "1985": 61000,
+          "1986": 75500,
+          "1987": 95800,
+          "1988": 120700,
+          "1989": 189700,
+          "1990": 189700,
+          "1991": 189700,
+          "1992": 169500,
+          "1993": 142400,
+          "1994": 132400,
+          "1995": 130200,
+          "1996": 132900,
+          "1997": 127600,
+          "1998": 142400,
+          "1999": 148100,
+          "2000": 157100,
+          "2001": 227500,
+          "2002": 255200,
+          "2003": 321700,
+          "2004": 452100,
+          "2005": 454900,
+          "2006": 498500,
+          "2007": 554300,
+          "2008": 517100,
+          "2009": 415300,
+          "2010": 385700,
+          "2011": 362500,
+          "2012": 362500,
+          "2013": 358800,
+          "2014": 387500,
+          "2015": 442000,
+          "2016": 527400,
+          "2017": 553800,
+          "2018": 619900,
+          "2019": 694200,
+          "2020": 781300,
+          "2021": 945200,
+          "2022": 1020800,
+          "2023": 1051100,
+          "2024": 1124900,
+          "2025": 1161200,
+          "2026": 1172500
+        }
+      },
+      "propertyAttributes": {
+        "attributeGroups": [
+          {
+            "title": "General",
+            "content": [
+              {
+                "label": "Land Use",
+                "value": "Three-Fam Dwelling"
+              },
+              {
+                "label": "Gross Area",
+                "value": "5,036 sq ft"
+              },
+              {
+                "label": "Living Area",
+                "value": "3,390 sq ft"
+              },
+              {
+                "label": "Lot Size",
+                "value": "4,375 sq ft"
+              },
+              {
+                "label": "Style",
+                "value": "Decker"
+              },
+              {
+                "label": "Story Height",
+                "value": "3"
+              },
+              {
+                "label": "Floor",
+                "value": null
+              },
+              {
+                "label": "Penthouse Unit",
+                "value": null
+              },
+              {
+                "label": "Orientation",
+                "value": null
+              },
+              {
+                "label": "View",
+                "value": "Average"
+              },
+              {
+                "label": "Grade",
+                "value": "Average"
+              }
+            ]
+          },
+          {
+            "title": "Rooms",
+            "content": [
+              {
+                "label": "Number of Bedrooms",
+                "value": 6
+              },
+              {
+                "label": "Total Bathrooms",
+                "value": "3"
+              },
+              {
+                "label": "Half Bathrooms",
+                "value": null
+              },
+              {
+                "label": "Other Fixtures",
+                "value": null
+              },
+              {
+                "label": "Bath Style 1",
+                "value": "Modern"
+              },
+              {
+                "label": "Bath Style 2",
+                "value": "Semi-Modern"
+              },
+              {
+                "label": "Bath Style 3",
+                "value": "Semi-Modern"
+              },
+              {
+                "label": "Number of Kitchens",
+                "value": 3
+              },
+              {
+                "label": "Kitchen Type",
+                "value": "3 Full Eat In Kitchens"
+              },
+              {
+                "label": "Kitchen Style 1",
+                "value": "Modern"
+              },
+              {
+                "label": "Kitchen Style 2",
+                "value": "Semi-Modern"
+              },
+              {
+                "label": "Kitchen Style 3",
+                "value": "Semi-Modern"
+              }
+            ]
+          },
+          {
+            "title": "Construction & Condition",
+            "content": [
+              {
+                "label": "Year Built",
+                "value": 1900
+              },
+              {
+                "label": "Exterior Finish",
+                "value": "Vinyl"
+              },
+              {
+                "label": "Exterior Condition",
+                "value": "Average"
+              },
+              {
+                "label": "Interior Finish",
+                "value": "Normal"
+              },
+              {
+                "label": "Interior Condition",
+                "value": "Average"
+              },
+              {
+                "label": "Roof Cover",
+                "value": "Rubber Roof"
+              },
+              {
+                "label": "Roof Structure",
+                "value": "Flat"
+              },
+              {
+                "label": "Foundation",
+                "value": "Concrete"
+              },
+              {
+                "label": "Parking Spots",
+                "value": 3
+              }
+            ]
+          },
+          {
+            "title": "Utilities",
+            "content": [
+              {
+                "label": "Heat Type",
+                "value": "Forced Hot Air"
+              },
+              {
+                "label": "AC Type",
+                "value": "Central Ac"
+              },
+              {
+                "label": "Fireplaces",
+                "value": null
+              }
+            ]
+          },
+          {
+            "title": "Outbuildings",
+            "content": [
+              {
+                "title": "Outbuilding 1",
+                "content": [
+                  {
+                    "label": "Type",
+                    "value": "Carport Sf"
+                  },
+                  {
+                    "label": "Size",
+                    "value": "352 sq ft"
+                  },
+                  {
+                    "label": "Quality",
+                    "value": "Very Good"
+                  },
+                  {
+                    "label": "Condition",
+                    "value": "Poor"
+                  }
+                ]
+              },
+              {
+                "title": "Outbuilding 2",
+                "content": [
+                  {
+                    "label": "Type",
+                    "value": "Garage Sf"
+                  },
+                  {
+                    "label": "Size",
+                    "value": "176 sq ft"
+                  },
+                  {
+                    "label": "Quality",
+                    "value": "Average"
+                  },
+                  {
+                    "label": "Condition",
+                    "value": "Average"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Last Transaction",
+            "content": [
+              {
+                "label": "Sale Price",
+                "value": null
+              },
+              {
+                "label": "Sale Date",
+                "value": "February 2, 2007"
+              },
+              {
+                "label": "Registry Book & Page",
+                "value": "41241-129"
+              }
+            ]
+          }
+        ]
+      },
+      "propertyTaxes": {
+        "propertyGrossTax": 14539,
+        "residentialExemptionFlag": false,
+        "personalExemptionFlag": false,
+        "residentialExemptionAmount": 0,
+        "personalExemptionAmount": 0,
+        "communityPreservationAmount": 132.99,
+        "propertyNetTax": 14671.99,
+        "parcelId": "0100873004",
+        "personalExemptionAmount1": 0,
+        "personalExemptionAmount2": 0,
+        "estimatedTotalFirstHalf": 14539,
+        "totalBilledAmount": 14671.99,
+        "streetBetterment": 0,
+        "fine38d": 0,
+        "bidDowntown": 0,
+        "bidGreenway": 0,
+        "bidNewMarket": 0
+      }
+    }
+  }
+}

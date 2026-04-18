@@ -1,0 +1,283 @@
+{
+  "result": {
+    "status": "success",
+    "message": "Property details fetched successfully",
+    "data": {
+      "overview": {
+        "fullAddress": "172 Cottage St, East Boston, 02128",
+        "owners": [
+          "Balekewicz Thomas",
+          "Dayos Merope",
+          "172 Cottage Street Condominium Trust"
+        ],
+        "imageSrc": "https://storage.googleapis.com/assessing-properties-prod.firebasestorage.app/static-map-images/0104048000.png?GoogleAccessId=517145664496-compute%40developer.gserviceaccount.com&Expires=1776535537&Signature=O3MOrBcfvsEm7dqfcBPi%2FjqvIHd04KngyY88tPWg3PTiYkFTAix%2FqYhum0ct4IelXsBIP%2FgBGPicLjirdFNf9ThMhiOw2Jko3MgRa5CgEW%2BkTDGx9L7JavS3vTo7xle1DH%2F8jGEe5ZF7zSDrU6mg0pZj7HfVC3PzWMgFOa6b%2BAGe5YKPmYFY0UPQEEc%2Fvn8Yhr88LPnLZGlfSQPzAFSTJSZnZHco%2FnqclDJC6oTMLVgrV15hDOMh%2B18U%2BsPI5B2Arp1yqULvRMqpj6GwGWUYr2As13Mwf5ZPv5KQkq89ivXVUR6%2BPBeddVwQp2hkjLVHseFlQQpK5%2FY2lqvpcLN19A%3D%3D",
+        "primaryOwnerInfo": {
+          "owner": "172 Cottage Street Condominium Trust",
+          "mailAddressee": null,
+          "mailStreetAddress": "172 Cottage St",
+          "mailCityAndState": "East Boston MA",
+          "mailZipCode": "02128"
+        },
+        "assessedValue": 0,
+        "propertyTypeCode": "0995",
+        "propertyTypeDescription": "Exempt Property Type",
+        "landUseCode": "CM",
+        "parcelId": "0104048000",
+        "netTax": 0,
+        "totalBilledAmount": 0,
+        "personalExemptionFlag": false,
+        "residentialExemptionFlag": false,
+        "personalExemptionAmount": 0,
+        "residentialExemptionAmount": 0,
+        "childParcelCount": 8,
+        "masterParcelId": null
+      },
+      "propertyValue": {
+        "historicPropertyValues": {
+          "1985": 62800,
+          "1986": 146900,
+          "1987": 136500,
+          "1988": 166500,
+          "1989": 303500,
+          "1990": 251500,
+          "1991": 251500,
+          "1992": 185500,
+          "1993": 175000,
+          "1994": 175000,
+          "1995": 188500,
+          "1996": 250500,
+          "1997": 261000,
+          "1998": 237500,
+          "1999": 180500,
+          "2000": 217500,
+          "2001": 284500,
+          "2002": 314000,
+          "2003": 314000,
+          "2004": 454000,
+          "2005": 436000,
+          "2006": 492500,
+          "2007": 528000,
+          "2008": 783000,
+          "2009": 0,
+          "2010": 0,
+          "2011": 0,
+          "2012": 0,
+          "2013": 0,
+          "2014": 0,
+          "2015": 0,
+          "2016": 0,
+          "2017": 0,
+          "2018": 0,
+          "2019": 0,
+          "2020": 0,
+          "2021": 0,
+          "2022": 0,
+          "2023": 0,
+          "2024": 0,
+          "2025": 0,
+          "2026": 0
+        }
+      },
+      "propertyAttributes": {
+        "attributeGroups": [
+          {
+            "title": "General",
+            "content": [
+              {
+                "label": "Land Use",
+                "value": "CM"
+              },
+              {
+                "label": "Gross Area",
+                "value": null
+              },
+              {
+                "label": "Living Area",
+                "value": null
+              },
+              {
+                "label": "Lot Size",
+                "value": "3,145 sq ft"
+              },
+              {
+                "label": "Style",
+                "value": "Not available"
+              },
+              {
+                "label": "Story Height",
+                "value": "Not available"
+              },
+              {
+                "label": "Floor",
+                "value": null
+              },
+              {
+                "label": "Penthouse Unit",
+                "value": null
+              },
+              {
+                "label": "Orientation",
+                "value": null
+              },
+              {
+                "label": "View",
+                "value": null
+              },
+              {
+                "label": "Grade",
+                "value": null
+              }
+            ]
+          },
+          {
+            "title": "Rooms",
+            "content": [
+              {
+                "label": "Number of Bedrooms",
+                "value": null
+              },
+              {
+                "label": "Total Bathrooms",
+                "value": null
+              },
+              {
+                "label": "Half Bathrooms",
+                "value": null
+              },
+              {
+                "label": "Other Fixtures",
+                "value": null
+              },
+              {
+                "label": "Bath Style 1",
+                "value": null
+              },
+              {
+                "label": "Bath Style 2",
+                "value": null
+              },
+              {
+                "label": "Bath Style 3",
+                "value": null
+              },
+              {
+                "label": "Number of Kitchens",
+                "value": null
+              },
+              {
+                "label": "Kitchen Type",
+                "value": null
+              },
+              {
+                "label": "Kitchen Style 1",
+                "value": null
+              },
+              {
+                "label": "Kitchen Style 2",
+                "value": null
+              },
+              {
+                "label": "Kitchen Style 3",
+                "value": null
+              }
+            ]
+          },
+          {
+            "title": "Construction & Condition",
+            "content": [
+              {
+                "label": "Year Built",
+                "value": null
+              },
+              {
+                "label": "Exterior Finish",
+                "value": null
+              },
+              {
+                "label": "Exterior Condition",
+                "value": null
+              },
+              {
+                "label": "Interior Finish",
+                "value": null
+              },
+              {
+                "label": "Interior Condition",
+                "value": null
+              },
+              {
+                "label": "Roof Cover",
+                "value": null
+              },
+              {
+                "label": "Roof Structure",
+                "value": null
+              },
+              {
+                "label": "Foundation",
+                "value": "Not available"
+              },
+              {
+                "label": "Parking Spots",
+                "value": null
+              }
+            ]
+          },
+          {
+            "title": "Utilities",
+            "content": [
+              {
+                "label": "Heat Type",
+                "value": null
+              },
+              {
+                "label": "AC Type",
+                "value": null
+              },
+              {
+                "label": "Fireplaces",
+                "value": null
+              }
+            ]
+          },
+          {
+            "title": "Last Transaction",
+            "content": [
+              {
+                "label": "Sale Price",
+                "value": null
+              },
+              {
+                "label": "Sale Date",
+                "value": "January 11, 2007"
+              },
+              {
+                "label": "Registry Book & Page",
+                "value": "41110-263"
+              }
+            ]
+          }
+        ]
+      },
+      "propertyTaxes": {
+        "propertyGrossTax": 0,
+        "residentialExemptionFlag": false,
+        "personalExemptionFlag": false,
+        "residentialExemptionAmount": 0,
+        "personalExemptionAmount": 0,
+        "communityPreservationAmount": 0,
+        "propertyNetTax": 0,
+        "parcelId": "0104048000",
+        "personalExemptionAmount1": 0,
+        "personalExemptionAmount2": 0,
+        "estimatedTotalFirstHalf": 0,
+        "totalBilledAmount": 0,
+        "streetBetterment": 0,
+        "fine38d": 0,
+        "bidDowntown": 0,
+        "bidGreenway": 0,
+        "bidNewMarket": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,281 @@
+{
+  "result": {
+    "status": "success",
+    "message": "Property details fetched successfully",
+    "data": {
+      "overview": {
+        "fullAddress": "540-R Sumner St, East Boston, 02128",
+        "owners": [
+          "City Of Boston"
+        ],
+        "imageSrc": "https://storage.googleapis.com/assessing-properties-prod.firebasestorage.app/static-map-images/0104418000.png?GoogleAccessId=517145664496-compute%40developer.gserviceaccount.com&Expires=1776535566&Signature=COjyUS%2FKCpaEe0PJMQArNeJ6W%2FafrXliYqTp7SrPo%2BY5BjkzrL7N0TvjBdwE79Pdv2NoqzaH7FSXlI%2F7CVyHjF%2Fv7HK2qdAlXrDQq0Zo%2B13ZP18uk0Jr%2FvRTMdEAca1A66WlRJohVnR7hD86MJAiLG3vVH6zx4NxlSYT5Ny0Fku%2BOwaN4bAFhL1F9Vf1MFb0HgErqFuuGcXzawfa3lwMEG12cwpYrUcopKrVMAcH4lJYNbFJ867o7KGC1RCqwTeVVNN2757NjW23DiL%2Bw%2FaKk%2BbSUjjYZ4lUvpj%2BGNNWFw1Jomm7r17BLAtNHUXxquxqrXy2Lr1ZEgym23jHiGOKcA%3D%3D",
+        "primaryOwnerInfo": {
+          "owner": "City Of Boston",
+          "mailAddressee": null,
+          "mailStreetAddress": "1 City Hall Sq",
+          "mailCityAndState": "Boston MA",
+          "mailZipCode": "02201"
+        },
+        "assessedValue": 102300,
+        "propertyTypeCode": "0985",
+        "propertyTypeDescription": "Exempt Property Type",
+        "landUseCode": "E",
+        "parcelId": "0104418000",
+        "netTax": 0,
+        "totalBilledAmount": 0,
+        "personalExemptionFlag": false,
+        "residentialExemptionFlag": false,
+        "personalExemptionAmount": 0,
+        "residentialExemptionAmount": 0,
+        "childParcelCount": 0,
+        "masterParcelId": null
+      },
+      "propertyValue": {
+        "historicPropertyValues": {
+          "1985": 11900,
+          "1986": 15000,
+          "1987": 16500,
+          "1988": 19500,
+          "1989": 24000,
+          "1990": 46500,
+          "1991": 46500,
+          "1992": 32000,
+          "1993": 25500,
+          "1994": 25500,
+          "1995": 27500,
+          "1996": 27500,
+          "1997": 27500,
+          "1998": 29000,
+          "1999": 29000,
+          "2000": 29000,
+          "2001": 36500,
+          "2002": 36500,
+          "2003": 36500,
+          "2004": 37900,
+          "2005": 37900,
+          "2006": 41700,
+          "2007": 49600,
+          "2008": 49600,
+          "2009": 46700,
+          "2010": 46700,
+          "2011": 46700,
+          "2012": 46700,
+          "2013": 46700,
+          "2014": 46700,
+          "2015": 52500,
+          "2016": 61200,
+          "2017": 64200,
+          "2018": 70000,
+          "2019": 73500,
+          "2020": 73700,
+          "2021": 70200,
+          "2022": 102300,
+          "2023": 102300,
+          "2024": 102300,
+          "2025": 102300,
+          "2026": 102300
+        }
+      },
+      "propertyAttributes": {
+        "attributeGroups": [
+          {
+            "title": "General",
+            "content": [
+              {
+                "label": "Land Use",
+                "value": "E"
+              },
+              {
+                "label": "Gross Area",
+                "value": "1 sq ft"
+              },
+              {
+                "label": "Living Area",
+                "value": "1 sq ft"
+              },
+              {
+                "label": "Lot Size",
+                "value": "5,833 sq ft"
+              },
+              {
+                "label": "Style",
+                "value": "Not available"
+              },
+              {
+                "label": "Story Height",
+                "value": "Not available"
+              },
+              {
+                "label": "Floor",
+                "value": null
+              },
+              {
+                "label": "Penthouse Unit",
+                "value": null
+              },
+              {
+                "label": "Orientation",
+                "value": null
+              },
+              {
+                "label": "View",
+                "value": null
+              },
+              {
+                "label": "Grade",
+                "value": null
+              }
+            ]
+          },
+          {
+            "title": "Rooms",
+            "content": [
+              {
+                "label": "Number of Bedrooms",
+                "value": null
+              },
+              {
+                "label": "Total Bathrooms",
+                "value": null
+              },
+              {
+                "label": "Half Bathrooms",
+                "value": null
+              },
+              {
+                "label": "Other Fixtures",
+                "value": null
+              },
+              {
+                "label": "Bath Style 1",
+                "value": null
+              },
+              {
+                "label": "Bath Style 2",
+                "value": null
+              },
+              {
+                "label": "Bath Style 3",
+                "value": null
+              },
+              {
+                "label": "Number of Kitchens",
+                "value": null
+              },
+              {
+                "label": "Kitchen Type",
+                "value": null
+              },
+              {
+                "label": "Kitchen Style 1",
+                "value": null
+              },
+              {
+                "label": "Kitchen Style 2",
+                "value": null
+              },
+              {
+                "label": "Kitchen Style 3",
+                "value": null
+              }
+            ]
+          },
+          {
+            "title": "Construction & Condition",
+            "content": [
+              {
+                "label": "Year Built",
+                "value": null
+              },
+              {
+                "label": "Exterior Finish",
+                "value": null
+              },
+              {
+                "label": "Exterior Condition",
+                "value": null
+              },
+              {
+                "label": "Interior Finish",
+                "value": null
+              },
+              {
+                "label": "Interior Condition",
+                "value": null
+              },
+              {
+                "label": "Roof Cover",
+                "value": null
+              },
+              {
+                "label": "Roof Structure",
+                "value": null
+              },
+              {
+                "label": "Foundation",
+                "value": "Not available"
+              },
+              {
+                "label": "Parking Spots",
+                "value": null
+              }
+            ]
+          },
+          {
+            "title": "Utilities",
+            "content": [
+              {
+                "label": "Heat Type",
+                "value": null
+              },
+              {
+                "label": "AC Type",
+                "value": null
+              },
+              {
+                "label": "Fireplaces",
+                "value": null
+              }
+            ]
+          },
+          {
+            "title": "Last Transaction",
+            "content": [
+              {
+                "label": "Sale Price",
+                "value": "$9"
+              },
+              {
+                "label": "Sale Date",
+                "value": "January 2, 2021"
+              },
+              {
+                "label": "Registry Book & Page",
+                "value": "99999-999"
+              }
+            ]
+          }
+        ]
+      },
+      "propertyTaxes": {
+        "propertyGrossTax": 0,
+        "residentialExemptionFlag": false,
+        "personalExemptionFlag": false,
+        "residentialExemptionAmount": 0,
+        "personalExemptionAmount": 0,
+        "communityPreservationAmount": 0,
+        "propertyNetTax": 0,
+        "parcelId": "0104418000",
+        "personalExemptionAmount1": 0,
+        "personalExemptionAmount2": 0,
+        "estimatedTotalFirstHalf": 0,
+        "totalBilledAmount": 0,
+        "streetBetterment": 0,
+        "fine38d": 0,
+        "bidDowntown": 0,
+        "bidGreenway": 0,
+        "bidNewMarket": 0
+      }
+    }
+  }
+}
