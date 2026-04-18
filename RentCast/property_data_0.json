@@ -1,0 +1,154 @@
+[
+  {
+    "id": "258-Lexington-St,-Boston,-MA-02128",
+    "formattedAddress": "258 Lexington St, Boston, MA 02128",
+    "addressLine1": "258 Lexington St",
+    "addressLine2": null,
+    "city": "Boston",
+    "state": "MA",
+    "stateFips": "25",
+    "zipCode": "02128",
+    "county": "Suffolk",
+    "countyFips": "025",
+    "latitude": 42.38049,
+    "longitude": -71.030524,
+    "propertyType": "Multi-Family",
+    "bedrooms": 7,
+    "bathrooms": 3,
+    "squareFootage": 3121,
+    "lotSize": 1250,
+    "yearBuilt": 1910,
+    "lastSaleDate": "2019-09-06T00:00:00.000Z",
+    "lastSalePrice": 1050000,
+    "features": {
+      "floorCount": 3,
+      "unitCount": 3
+    },
+    "taxAssessments": {
+      "2016": {
+        "year": 2016,
+        "value": 357800,
+        "land": 125000,
+        "improvements": 232800
+      },
+      "2017": {
+        "year": 2017,
+        "value": 411400,
+        "land": 125000,
+        "improvements": 286400
+      },
+      "2018": {
+        "year": 2018,
+        "value": 473300,
+        "land": 125000,
+        "improvements": 348300
+      },
+      "2019": {
+        "year": 2019,
+        "value": 530200,
+        "land": 125000,
+        "improvements": 405200
+      },
+      "2020": {
+        "year": 2020,
+        "value": 593900,
+        "land": 207500,
+        "improvements": 386400
+      },
+      "2021": {
+        "year": 2021,
+        "value": 708700,
+        "land": 186000,
+        "improvements": 522700
+      },
+      "2022": {
+        "year": 2022,
+        "value": 708700,
+        "land": 186000,
+        "improvements": 522700
+      },
+      "2023": {
+        "year": 2023,
+        "value": 772500,
+        "land": 202700,
+        "improvements": 569800
+      },
+      "2024": {
+        "year": 2024,
+        "value": 780300,
+        "land": 204800,
+        "improvements": 575500
+      },
+      "2025": {
+        "year": 2025,
+        "value": 844100,
+        "land": 204800,
+        "improvements": 639300
+      }
+    },
+    "propertyTaxes": {
+      "2016": {
+        "year": 2016,
+        "total": 3936
+      },
+      "2017": {
+        "year": 2017,
+        "total": 4357
+      },
+      "2018": {
+        "year": 2018,
+        "total": 4960
+      },
+      "2019": {
+        "year": 2019,
+        "total": 5588
+      },
+      "2020": {
+        "year": 2020,
+        "total": 6272
+      },
+      "2021": {
+        "year": 2021,
+        "total": 7562
+      },
+      "2022": {
+        "year": 2022,
+        "total": 7711
+      },
+      "2023": {
+        "year": 2023,
+        "total": 8297
+      },
+      "2024": {
+        "year": 2024,
+        "total": 8505
+      },
+      "2025": {
+        "year": 2025,
+        "total": 9775
+      }
+    },
+    "history": {
+      "1998-05-28": {
+        "event": "Sale",
+        "date": "1998-05-28T00:00:00.000Z",
+        "price": 147500
+      },
+      "2006-02-15": {
+        "event": "Sale",
+        "date": "2006-02-15T00:00:00.000Z",
+        "price": 345000
+      },
+      "2019-05-02": {
+        "event": "Sale",
+        "date": "2019-05-02T00:00:00.000Z",
+        "price": 890000
+      },
+      "2019-09-06": {
+        "event": "Sale",
+        "date": "2019-09-06T00:00:00.000Z",
+        "price": 1050000
+      }
+    }
+  }
+]

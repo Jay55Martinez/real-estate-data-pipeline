@@ -48,5 +48,5 @@ def fetch_property_data(address):
 
 if __name__ == '__main__':
     # Example usage
-    address = '258 Lexington Street, East Boston, MA, 02128'
+    address = '85 Trenton St Unit 2, Boston, MA 02128'
     fetch_property_data(address)
