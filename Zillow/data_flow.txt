@@ -1,0 +1,15 @@
+
+Search Page
+   ↓
+(SearchQuery)
+   ↓
+Returns cards:
+   - address
+   - price
+   - detailUrl (contains buildingKey)
+
+Click card
+   ↓
+(BuildingQuery)
+   ↓
+Returns full building data
