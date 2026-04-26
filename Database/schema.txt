@@ -1,0 +1,729 @@
+Real Estate Data Pipeline - PostgreSQL Schema Outline
+=====================================================
+
+Purpose
+-------
+Store property, assessment, tax, deed, listing, rental, and source-ingestion data
+from multiple real estate sources in a PostgreSQL database. The design separates
+stable analytical entities from raw source payloads so the pipeline can scale,
+deduplicate records, and reprocess data as source formats change.
+
+Recommended PostgreSQL setup
+----------------------------
+Extensions:
+- pgcrypto: gen_random_uuid() for ingestion/source UUIDs.
+- postgis: geography(Point, 4326) for spatial queries, if location analysis will
+  matter. If PostGIS is not installed yet, keep latitude/longitude numeric
+  columns and add PostGIS later.
+- pg_trgm: optional, useful for fast fuzzy address search.
+- citext: optional, useful for case-insensitive source names and normalized
+  reference values.
+
+Naming conventions:
+- Table names are plural snake_case.
+- Primary keys use bigint generated always as identity unless a natural public
+  identifier is truly stable.
+- Timestamps are timestamptz.
+- Money values use numeric(14,2), not float.
+- Measurements use integer where whole units are expected.
+- Raw source records are stored as jsonb and linked to normalized rows.
+
+
+Core Reference Tables
+=====================
+
+sources
+-------
+Tracks each upstream data source.
+
+source_id              bigint primary key generated always as identity
+source_name            text not null unique
+source_type            text not null
+source_url             text
+notes                  text
+created_at             timestamptz not null default now()
+
+Examples:
+- analyze_boston_assessment
+- boston_property_lookup
+- rentcast
+- mass_land_records
+- zillow
+
+
+ingestion_runs
+--------------
+Tracks each scraper/API/CSV load run.
+
+ingestion_run_id       uuid primary key default gen_random_uuid()
+source_id              bigint not null references sources(source_id)
+started_at             timestamptz not null default now()
+finished_at            timestamptz
+status                 text not null check (status in ('running', 'succeeded', 'failed', 'partial'))
+source_query           jsonb
+records_read           integer not null default 0
+records_inserted       integer not null default 0
+records_updated        integer not null default 0
+error_message          text
+
+Indexes:
+- (source_id, started_at desc)
+- (status, started_at desc)
+
+
+raw_source_records
+------------------
+Immutable-ish landing table for raw API responses, CSV rows, and scraper output.
+Keep this table even after normalization so you can audit and reload data.
+
+raw_record_id          uuid primary key default gen_random_uuid()
+ingestion_run_id       uuid not null references ingestion_runs(ingestion_run_id)
+source_id              bigint not null references sources(source_id)
+source_record_key      text
+source_record_hash     text not null
+payload                jsonb not null
+observed_at            timestamptz not null default now()
+normalized_at          timestamptz
+normalization_status   text not null default 'pending'
+normalization_error    text
+
+Constraints:
+- unique (source_id, source_record_hash)
+
+Indexes:
+- (source_id, source_record_key)
+- (normalization_status, observed_at)
+- gin (payload)
+
+
+states
+------
+state_code             char(2) primary key
+state_name             text not null
+state_fips             text
+
+
+counties
+--------
+county_id              bigint primary key generated always as identity
+state_code             char(2) not null references states(state_code)
+county_name            text not null
+county_fips            text
+
+Constraints:
+- unique (state_code, county_name)
+- unique (state_code, county_fips)
+
+
+postal_codes
+------------
+postal_code            text primary key
+state_code             char(2) references states(state_code)
+city                   text
+county_id              bigint references counties(county_id)
+
+Indexes:
+- (state_code, city)
+- (county_id)
+
+
+neighborhoods
+-------------
+neighborhood_id        bigint primary key generated always as identity
+city                   text not null
+state_code             char(2) not null references states(state_code)
+neighborhood_name      text not null
+
+Constraints:
+- unique (city, state_code, neighborhood_name)
+
+
+postal_code_neighborhoods
+-------------------------
+Many-to-many mapping because one zip code can contain several neighborhoods and
+one neighborhood can span multiple zip codes.
+
+postal_code            text not null references postal_codes(postal_code)
+neighborhood_id        bigint not null references neighborhoods(neighborhood_id)
+is_primary             boolean not null default false
+
+Primary key:
+- (postal_code, neighborhood_id)
+
+
+property_types
+--------------
+property_type_id       bigint primary key generated always as identity
+property_type_code     text
+property_type_name     text not null
+property_category      text
+description            text
+
+Constraints:
+- unique (property_type_code)
+
+Examples:
+- Residential Property
+- Three-Fam Dwelling
+- Condo
+- Multifamily
+
+
+land_use_types
+--------------
+land_use_type_id       bigint primary key generated always as identity
+land_use_code          text not null unique
+land_use_name          text not null
+description            text
+
+Examples:
+- R3
+- 0105 / 105, if sourced as land-use or assessor use code
+
+
+feature_definitions
+-------------------
+Reference table for flexible property attributes from varied sources.
+
+feature_definition_id  bigint primary key generated always as identity
+feature_group          text
+feature_name           text not null
+value_type             text not null check (value_type in ('text', 'integer', 'numeric', 'boolean', 'date', 'json'))
+unit                   text
+description            text
+
+Constraints:
+- unique (feature_group, feature_name)
+
+Examples:
+- Rooms / Number of Bedrooms
+- Construction & Condition / Roof Cover
+- Utilities / Heat Type
+
+
+transaction_types
+-----------------
+transaction_type_id    bigint primary key generated always as identity
+transaction_type_code  text not null unique
+transaction_type_name  text not null
+description            text
+
+Examples:
+- sale
+- deed_transfer
+- listed_for_sale
+- listed_for_rent
+- rental_event
+
+
+listing_statuses
+----------------
+listing_status_id      bigint primary key generated always as identity
+status_code            text not null unique
+status_name            text not null
+
+Examples:
+- active
+- pending
+- sold
+- rented
+- off_market
+- expired
+
+
+person_or_organizations
+-----------------------
+Owners, sellers, buyers, and other deed/listing parties. This is intentionally
+generic because parties can be people, trusts, LLCs, estates, or agencies.
+
+party_id               bigint primary key generated always as identity
+party_name             text not null
+party_type             text check (party_type in ('person', 'organization', 'trust', 'government', 'unknown'))
+normalized_name        text
+created_at             timestamptz not null default now()
+
+Indexes:
+- (normalized_name)
+
+
+addresses
+---------
+Reusable address table for property situs addresses and mailing addresses.
+
+address_id             bigint primary key generated always as identity
+address_line1          text not null
+address_line2          text
+city                   text
+state_code             char(2) references states(state_code)
+postal_code            text references postal_codes(postal_code)
+county_id              bigint references counties(county_id)
+formatted_address      text
+latitude               numeric(10,7)
+longitude              numeric(10,7)
+geom                   geography(Point, 4326)
+address_hash           text
+created_at             timestamptz not null default now()
+updated_at             timestamptz not null default now()
+
+Constraints:
+- unique (address_hash)
+
+Indexes:
+- (postal_code)
+- (city, state_code)
+- gist (geom), if PostGIS is enabled
+
+
+Core Property Tables
+====================
+
+properties
+----------
+Canonical property entity. One row should represent one real-world parcel/unit
+or property record after deduplication across sources.
+
+property_id            bigint primary key generated always as identity
+canonical_address_id   bigint references addresses(address_id)
+property_type_id       bigint references property_types(property_type_id)
+land_use_type_id       bigint references land_use_types(land_use_type_id)
+county_id              bigint references counties(county_id)
+state_code             char(2) references states(state_code)
+postal_code            text references postal_codes(postal_code)
+is_active              boolean not null default true
+created_at             timestamptz not null default now()
+updated_at             timestamptz not null default now()
+
+Common denormalized search fields:
+- display_address       text
+- city                  text
+- latitude              numeric(10,7)
+- longitude             numeric(10,7)
+- geom                  geography(Point, 4326)
+
+Notes:
+- Do not store "is_listed" here. Listing status changes over time and belongs in
+  listings and listing_price_history.
+- Avoid using source-specific parcel IDs as the primary key. Store them in
+  property_source_ids.
+
+Indexes:
+- (postal_code)
+- (county_id)
+- (property_type_id)
+- (land_use_type_id)
+- gin (display_address gin_trgm_ops), if pg_trgm is enabled
+- gist (geom), if PostGIS is enabled
+
+
+property_source_ids
+-------------------
+Maps source identifiers to canonical properties. This is where Boston PID,
+GIS_ID, RentCast id, Mass registry identifiers, and similar IDs belong.
+
+property_source_id     bigint primary key generated always as identity
+property_id            bigint not null references properties(property_id) on delete cascade
+source_id              bigint not null references sources(source_id)
+source_property_key    text not null
+source_property_key_type text not null
+valid_from             date
+valid_to               date
+raw_record_id          uuid references raw_source_records(raw_record_id)
+created_at             timestamptz not null default now()
+
+Constraints:
+- unique (source_id, source_property_key_type, source_property_key)
+
+Indexes:
+- (property_id, source_id)
+
+Examples:
+- boston_pid: 0100254000
+- gis_id: 0100254000
+- rentcast_id: 85-Trenton-St,-Apt-2,-East-Boston,-MA-02128
+
+
+property_physical_attributes
+----------------------------
+Current best-known physical facts about the property. Keep frequently queried
+attributes as typed columns; source-specific details go in property_features.
+
+property_id            bigint primary key references properties(property_id) on delete cascade
+building_count         integer
+residential_units      integer
+commercial_units       integer
+rental_units           integer
+bedrooms               integer
+full_bathrooms         integer
+half_bathrooms         integer
+bathrooms_total        numeric(4,1)
+kitchens               integer
+total_rooms            integer
+gross_area_sqft        integer
+living_area_sqft       integer
+land_area_sqft         integer
+year_built             integer
+year_remodeled         integer
+parking_spaces         integer
+fireplaces             integer
+stories                numeric(5,2)
+last_observed_at       timestamptz
+raw_record_id          uuid references raw_source_records(raw_record_id)
+updated_at             timestamptz not null default now()
+
+Checks:
+- year_built between 1600 and 2200
+- living_area_sqft >= 0
+- land_area_sqft >= 0
+
+
+property_features
+-----------------
+Flexible EAV-style table for source attributes that are useful but too varied
+for core columns.
+
+property_feature_id    bigint primary key generated always as identity
+property_id            bigint not null references properties(property_id) on delete cascade
+feature_definition_id  bigint not null references feature_definitions(feature_definition_id)
+value_text             text
+value_integer          integer
+value_numeric          numeric(14,4)
+value_boolean          boolean
+value_date             date
+value_json             jsonb
+source_id              bigint references sources(source_id)
+raw_record_id          uuid references raw_source_records(raw_record_id)
+observed_at            timestamptz not null default now()
+
+Constraints:
+- unique (property_id, feature_definition_id, source_id, observed_at)
+
+Indexes:
+- (property_id, feature_definition_id)
+- (feature_definition_id, value_text)
+- gin (value_json)
+
+
+property_owners
+---------------
+Time-aware ownership table. Supports multiple owners per property and changing
+ownership over time.
+
+property_owner_id      bigint primary key generated always as identity
+property_id            bigint not null references properties(property_id) on delete cascade
+party_id               bigint not null references person_or_organizations(party_id)
+mailing_address_id     bigint references addresses(address_id)
+ownership_role         text
+ownership_percent      numeric(7,4)
+start_date             date
+end_date               date
+is_current             boolean not null default true
+source_id              bigint references sources(source_id)
+raw_record_id          uuid references raw_source_records(raw_record_id)
+created_at             timestamptz not null default now()
+
+Indexes:
+- (property_id, is_current)
+- (party_id)
+- (mailing_address_id)
+
+
+Assessments And Taxes
+=====================
+
+property_assessments
+--------------------
+Annual or periodic assessed values from municipal/county assessment sources.
+
+assessment_id          bigint primary key generated always as identity
+property_id            bigint not null references properties(property_id) on delete cascade
+source_id              bigint not null references sources(source_id)
+assessment_year        integer not null
+assessment_date        date
+land_value             numeric(14,2)
+building_value         numeric(14,2)
+special_feature_value  numeric(14,2)
+total_assessed_value   numeric(14,2) not null
+source_property_key    text
+raw_record_id          uuid references raw_source_records(raw_record_id)
+created_at             timestamptz not null default now()
+
+Constraints:
+- unique (property_id, source_id, assessment_year)
+- assessment_year between 1600 and 2200
+
+Indexes:
+- (assessment_year)
+- (property_id, assessment_year desc)
+- (total_assessed_value)
+
+
+property_taxes
+--------------
+Tax bills and exemptions for a property and tax year.
+
+tax_id                 bigint primary key generated always as identity
+property_id            bigint not null references properties(property_id) on delete cascade
+source_id              bigint not null references sources(source_id)
+tax_year               integer not null
+gross_tax_amount       numeric(14,2)
+net_tax_amount         numeric(14,2)
+total_billed_amount    numeric(14,2)
+residential_exemption_flag boolean
+personal_exemption_flag boolean
+residential_exemption_amount numeric(14,2)
+personal_exemption_amount numeric(14,2)
+community_preservation_amount numeric(14,2)
+other_charges          jsonb
+raw_record_id          uuid references raw_source_records(raw_record_id)
+created_at             timestamptz not null default now()
+
+Constraints:
+- unique (property_id, source_id, tax_year)
+
+Indexes:
+- (tax_year)
+- (property_id, tax_year desc)
+
+
+Transactions, Deeds, Listings, And Rent
+=======================================
+
+property_transactions
+---------------------
+Canonical transaction/event table for sales, transfers, and other market events.
+
+transaction_id         bigint primary key generated always as identity
+property_id            bigint not null references properties(property_id) on delete cascade
+transaction_type_id    bigint not null references transaction_types(transaction_type_id)
+source_id              bigint not null references sources(source_id)
+transaction_date       date
+recorded_date          date
+amount                 numeric(14,2)
+book_number            text
+page_number            text
+document_number        text
+instrument_type        text
+source_transaction_key text
+raw_record_id          uuid references raw_source_records(raw_record_id)
+created_at             timestamptz not null default now()
+
+Constraints:
+- unique (source_id, source_transaction_key)
+
+Indexes:
+- (property_id, transaction_date desc)
+- (transaction_date)
+- (amount)
+- (book_number, page_number)
+- (document_number)
+
+Notes:
+- last_sale_price should be derived from the latest sale transaction, not stored
+  as a separate mutable field on properties.
+
+
+transaction_parties
+-------------------
+People/organizations connected to transactions.
+
+transaction_party_id   bigint primary key generated always as identity
+transaction_id         bigint not null references property_transactions(transaction_id) on delete cascade
+party_id               bigint not null references person_or_organizations(party_id)
+party_role             text not null
+
+Constraints:
+- unique (transaction_id, party_id, party_role)
+
+Examples:
+- buyer
+- seller
+- grantor
+- grantee
+
+
+listings
+--------
+Property listing snapshots/events from listing and rental sources.
+
+listing_id             bigint primary key generated always as identity
+property_id            bigint not null references properties(property_id) on delete cascade
+source_id              bigint not null references sources(source_id)
+listing_status_id      bigint references listing_statuses(listing_status_id)
+listing_type           text not null check (listing_type in ('sale', 'rent'))
+list_date              date
+removed_date           date
+price                  numeric(14,2)
+rent_period            text
+bedrooms               integer
+bathrooms              numeric(4,1)
+living_area_sqft       integer
+source_listing_key     text
+raw_record_id          uuid references raw_source_records(raw_record_id)
+observed_at            timestamptz not null default now()
+created_at             timestamptz not null default now()
+
+Constraints:
+- unique (source_id, source_listing_key, observed_at)
+
+Indexes:
+- (property_id, observed_at desc)
+- (listing_type, listing_status_id, observed_at desc)
+- (price)
+
+
+listing_price_history
+---------------------
+Optional normalized history when a source exposes listing price/status changes.
+
+listing_price_history_id bigint primary key generated always as identity
+listing_id             bigint not null references listings(listing_id) on delete cascade
+changed_at             timestamptz not null
+old_price              numeric(14,2)
+new_price              numeric(14,2)
+old_listing_status_id  bigint references listing_statuses(listing_status_id)
+new_listing_status_id  bigint references listing_statuses(listing_status_id)
+raw_record_id          uuid references raw_source_records(raw_record_id)
+
+Indexes:
+- (listing_id, changed_at desc)
+
+
+rental_estimates
+----------------
+Point-in-time rent estimates and market rent observations.
+
+rental_estimate_id     bigint primary key generated always as identity
+property_id            bigint not null references properties(property_id) on delete cascade
+source_id              bigint not null references sources(source_id)
+estimate_date          date not null
+estimated_rent         numeric(14,2)
+rent_low               numeric(14,2)
+rent_high              numeric(14,2)
+bedrooms               integer
+bathrooms              numeric(4,1)
+raw_record_id          uuid references raw_source_records(raw_record_id)
+created_at             timestamptz not null default now()
+
+Constraints:
+- unique (property_id, source_id, estimate_date, bedrooms, bathrooms)
+
+Indexes:
+- (property_id, estimate_date desc)
+- (estimate_date)
+
+
+Massachusetts / Boston Specific Tables
+======================================
+
+ma_registry_districts
+---------------------
+registry_district_id   bigint primary key generated always as identity
+district_name          text not null unique
+county_id              bigint references counties(county_id)
+registry_url           text
+
+Examples:
+- Suffolk
+- Middlesex South
+
+
+ma_property_registry_refs
+-------------------------
+Massachusetts registry-specific references for a property.
+
+ma_property_registry_ref_id bigint primary key generated always as identity
+property_id            bigint not null references properties(property_id) on delete cascade
+registry_district_id   bigint references ma_registry_districts(registry_district_id)
+book_number            text
+page_number            text
+certificate_number     text
+plan_number            text
+source_id              bigint references sources(source_id)
+raw_record_id          uuid references raw_source_records(raw_record_id)
+created_at             timestamptz not null default now()
+
+Indexes:
+- (registry_district_id, book_number, page_number)
+- (property_id)
+
+
+boston_assessor_details
+-----------------------
+Boston-specific assessor fields that are useful but should not pollute the
+generic property table.
+
+property_id            bigint primary key references properties(property_id) on delete cascade
+boston_pid             text not null unique
+cm_id                  text
+gis_id                 text
+building_sequence      integer
+num_buildings          integer
+luc                    text
+lu                     text
+lu_description         text
+building_type          text
+owner_occupied         boolean
+personal_exemption_flag boolean
+residential_exemption_flag boolean
+child_parcel_count     integer
+master_parcel_id       text
+image_url              text
+source_id              bigint references sources(source_id)
+raw_record_id          uuid references raw_source_records(raw_record_id)
+updated_at             timestamptz not null default now()
+
+Indexes:
+- (gis_id)
+- (master_parcel_id)
+- (lu)
+
+
+Operational Maintenance
+=======================
+
+updated_at triggers
+-------------------
+Add a common trigger function to update updated_at columns before update on:
+- addresses
+- properties
+- property_physical_attributes
+- boston_assessor_details
+
+
+Recommended large-table partitioning
+------------------------------------
+Do not partition too early, but these tables are natural candidates once row
+counts grow into tens of millions:
+- raw_source_records by observed_at month or source_id.
+- listings by observed_at month.
+- property_transactions by transaction_date year.
+- property_assessments by assessment_year.
+
+
+Important analytical views
+--------------------------
+current_property_summary:
+- One row per property with address, property type, current owner, latest
+  assessment, latest tax, latest transaction, latest listing status, and current
+  physical attributes.
+
+latest_property_assessment:
+- Latest assessment per property using row_number() over
+  (partition by property_id order by assessment_year desc).
+
+latest_property_sale:
+- Latest sale/deed_transfer transaction per property.
+
+active_listings:
+- Latest active sale/rent listing rows.
+
+
+Initial seed/reference data
+---------------------------
+Seed these before normalizing source records:
+- states: MA
+- counties: Suffolk, plus others as data expands
+- sources: Analyze Boston, Boston Property Lookup, RentCast, Mass Land Records
+- transaction_types
+- listing_statuses
+- common property_types and land_use_types from current source samples
