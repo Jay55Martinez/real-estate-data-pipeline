@@ -1,3 +1,12 @@
 .env
 .venv*
 *.pem
+__pycache__/
+*.py[cod]
+.codex
+
+# Files to ignore!
+proxies.txt
+Zillow/proxies.txt
+Zillow/pyzill_test_output/
+Zillow/Example Requests/*.cmd
