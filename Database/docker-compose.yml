@@ -1,6 +1,6 @@
 services:
   postgres:
-    image: postgres:16
+    image: postgis/postgis:16-3.4
     container_name: real_estate_postgres_dev
     restart: unless-stopped
     env_file:
