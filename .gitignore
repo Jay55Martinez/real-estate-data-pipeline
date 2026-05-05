@@ -21,3 +21,7 @@ Database/backups/
 
 # Local database data
 Database/data/
+
+# Generated ETL data
+data/raw/
+data/extracted/
