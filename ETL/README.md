@@ -5,35 +5,44 @@ source is Analyze Boston property assessment data, which defines the initial
 East Boston property universe before later enrichment from Boston Property
 Lookup, Mass Land Records, RentCast, Zillow, and other sources.
 
-## Analyze Boston Assessment Extract
+# Process Flow Overview
 
-Run against the newest CSV published in the Analyze Boston CKAN catalog:
+Database Initialized
+        |
+        v
+[1] Load Prerequisite / Reference Data
+        |
+        v
+[2] Discover Latest Analyze Boston CSV
+        |
+        v
+[3] Download CSV
+        |
+        v
+[4] Validate File Integrity
+        |
+        v
+[5] Parse CSV Rows
+        |
+        v
+[6] Filter to East Boston Scope
+        |
+        v
+[7] Normalize / Validate Rows
+        |
+        v
+[8] Insert Raw Source Records
+        |
+        v
+[9] Canonical Mapping
+        |
+        v
+[10] Insert / Upsert Canonical Tables
+        |
+        v
+[11] Write Manifest + Ingestion Summary
 
-```bash
-python3 -m ETL.analyze_boston.property_assessment
-```
-
-Run against the checked-in development CSV:
-
-```bash
-python3 -m ETL.analyze_boston.property_assessment \
-  --source-csv "Analyze Boston/fy2026-property-assessment-data_12_23_2025.csv"
-```
-
-Extract and load raw housing records into PostgreSQL:
-
-```bash
-.venv/bin/python -m ETL.analyze_boston.property_assessment \
-  --source-csv "Analyze Boston/fy2026-property-assessment-data_12_23_2025.csv" \
-  --load-db
-```
-
-Database settings are read from `DATABASE_URL` first, then `Database/.env`.
-The load currently writes the landing tables only: `sources`, `ingestion_runs`,
-and `raw_source_records`. The next pipeline stage should normalize those raw
-records into `properties`, `property_source_ids`, `property_assessments`,
-`property_taxes`, `property_physical_attributes`, and
-`boston_assessor_details`.
+# Config
 
 Default geography is East Boston:
 
