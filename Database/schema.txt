@@ -120,6 +120,7 @@ postal_codes
 postal_code            text primary key
 state_code             char(2) references states(state_code)
 city                   text
+neighborhood           text
 county_id              bigint references counties(county_id)
 
 Indexes:

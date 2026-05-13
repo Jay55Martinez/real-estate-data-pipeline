@@ -58,11 +58,17 @@ CREATE TABLE IF NOT EXISTS postal_codes (
     postal_code TEXT PRIMARY KEY,
     state_code CHAR(2) REFERENCES states(state_code),
     city TEXT,
+    -- Denormalized primary neighborhood/planning-district label for convenient
+    -- filtering. The normalized many-to-many relationship lives in
+    -- postal_code_neighborhoods because postal codes and neighborhoods do not
+    -- map one-to-one.
+    neighborhood TEXT,
     county_id BIGINT REFERENCES counties(county_id)
 );
 
 CREATE INDEX IF NOT EXISTS idx_postal_codes_state_city ON postal_codes(state_code, city);
 CREATE INDEX IF NOT EXISTS idx_postal_codes_county_id ON postal_codes(county_id);
+CREATE INDEX IF NOT EXISTS idx_postal_codes_neighborhood ON postal_codes(neighborhood);
 
 CREATE TABLE IF NOT EXISTS neighborhoods (
     neighborhood_id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
@@ -78,6 +84,10 @@ CREATE TABLE IF NOT EXISTS postal_code_neighborhoods (
     is_primary BOOLEAN NOT NULL DEFAULT FALSE,
     PRIMARY KEY (postal_code, neighborhood_id)
 );
+
+CREATE UNIQUE INDEX IF NOT EXISTS idx_postal_code_neighborhoods_one_primary
+ON postal_code_neighborhoods(postal_code)
+WHERE is_primary;
 
 CREATE TABLE IF NOT EXISTS property_types (
     property_type_id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
@@ -570,56 +580,5 @@ LEFT JOIN land_use_types lut ON lut.land_use_type_id = p.land_use_type_id
 LEFT JOIN property_physical_attributes ppa ON ppa.property_id = p.property_id
 LEFT JOIN latest_property_assessment lpa ON lpa.property_id = p.property_id
 LEFT JOIN latest_property_sale lps ON lps.property_id = p.property_id;
-
--- ============================================================
--- Seed Data
--- ============================================================
-
-INSERT INTO states (state_code, state_name, state_fips)
-VALUES ('MA', 'Massachusetts', '25')
-ON CONFLICT (state_code) DO NOTHING;
-
-INSERT INTO counties (state_code, county_name, county_fips)
-VALUES
-    ('MA', 'Suffolk', '025')
-ON CONFLICT DO NOTHING;
-
-INSERT INTO sources (source_name, source_type, source_url, notes)
-VALUES
-    ('analyze_boston_assessment', 'csv', 'https://data.boston.gov/', 'Boston assessment dataset'),
-    ('boston_property_lookup', 'api', 'https://properties.boston.gov/', 'Boston property lookup JSON responses'),
-    ('rentcast', 'api', 'https://www.rentcast.io/', 'RentCast property/listing/rent data'),
-    ('mass_land_records', 'registry', 'https://www.masslandrecords.com/', 'Massachusetts deed and registry records'),
-    ('zillow', 'web', 'https://www.zillow.com/', 'Listing status/reference source')
-ON CONFLICT (source_name) DO NOTHING;
-
-INSERT INTO transaction_types (transaction_type_code, transaction_type_name, description)
-VALUES
-    ('sale', 'Sale', 'Property sale transaction'),
-    ('deed_transfer', 'Deed Transfer', 'Recorded deed transfer'),
-    ('listed_for_sale', 'Listed For Sale', 'Property listed for sale'),
-    ('listed_for_rent', 'Listed For Rent', 'Property listed for rent'),
-    ('rental_event', 'Rental Event', 'Rental market event')
-ON CONFLICT (transaction_type_code) DO NOTHING;
-
-INSERT INTO listing_statuses (status_code, status_name)
-VALUES
-    ('active', 'Active'),
-    ('pending', 'Pending'),
-    ('sold', 'Sold'),
-    ('rented', 'Rented'),
-    ('off_market', 'Off Market'),
-    ('expired', 'Expired')
-ON CONFLICT (status_code) DO NOTHING;
-
-INSERT INTO property_types (property_type_code, property_type_name, property_category)
-VALUES
-    ('residential', 'Residential Property', 'residential'),
-    ('condo', 'Condo', 'residential'),
-    ('multifamily', 'Multifamily', 'residential'),
-    ('three_family', 'Three-Family Dwelling', 'residential'),
-    ('commercial', 'Commercial Property', 'commercial'),
-    ('mixed_use', 'Mixed Use', 'mixed_use')
-ON CONFLICT (property_type_code) DO NOTHING;
 
 COMMIT;
