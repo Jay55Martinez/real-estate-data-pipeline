@@ -57,16 +57,35 @@ Outputs are written under `data/extracted/analyze_boston/`:
 - `east_boston_housing_core_fyYYYY.csv`: high-level normalized fields for the core database tables
 - `east_boston_manifest_fyYYYY.json`: source metadata, run config, counts, and output paths
 
-The script is intentionally download/extract only. Loading into PostgreSQL
-should be the next stage, using the schema's `sources`, `ingestion_runs`,
-`raw_source_records`, `properties`, `property_source_ids`,
-`property_physical_attributes`, `property_assessments`, `property_taxes`, and
-`boston_assessor_details` tables.
+The Analyze Boston entry point can now run either extract-only or full database
+ingestion:
+
+```bash
+python -m ETL.analyze_boston.property_assessment
+python -m ETL.analyze_boston.property_assessment --load-db
+```
+
+For local CSVs whose filename does not contain an FY year, pass the assessment
+year explicitly so `property_assessments` and `property_taxes` can be populated:
+
+```bash
+python -m ETL.analyze_boston.property_assessment \
+  --source-csv "Analyze Boston/sample_listing_02128.csv" \
+  --assessment-year 2026 \
+  --load-db
+```
+
+The loader keeps the raw audit trail in `raw_source_records`, then maps each
+housing row into canonical tables: `addresses`, `properties`,
+`property_source_ids`, `property_physical_attributes`,
+`property_assessments`, `property_taxes`, `property_owners`,
+`person_or_organizations`, `boston_assessor_details`, and
+`property_features` for assessor-specific descriptive fields.
 
 Future orchestration can wrap this module as the first startup task in Prefect:
 
 1. Discover and cache the latest annual Analyze Boston CSV.
 2. Extract scoped geography/housing records.
 3. Load raw JSONL into `raw_source_records`.
-4. Upsert high-level core CSV into normalized tables.
+4. Upsert normalized assessment records into canonical database tables.
 5. Trigger downstream enrichments only for changed/new source record hashes.
