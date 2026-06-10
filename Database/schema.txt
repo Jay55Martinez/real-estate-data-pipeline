@@ -280,8 +280,10 @@ Core Property Tables
 
 properties
 ----------
-Canonical property entity. One row should represent one real-world parcel/unit
-or property record after deduplication across sources.
+Canonical assessor/property entity. One row should represent one official
+property record after deduplication across sources. For Boston assessment data,
+this is the level that carries the official Boston PID, tax, ownership, and
+assessment identity.
 
 property_id            bigint primary key generated always as identity
 canonical_address_id   bigint references addresses(address_id)
@@ -306,6 +308,8 @@ Notes:
   listings and listing_price_history.
 - Avoid using source-specific parcel IDs as the primary key. Store them in
   property_source_ids.
+- Do not create fake properties or fake Boston PIDs for market-discovered rental
+  units. Store those child records in property_units.
 
 Indexes:
 - (postal_code)
@@ -341,6 +345,50 @@ Examples:
 - boston_pid: 0100254000
 - gis_id: 0100254000
 - rentcast_id: 85-Trenton-St,-Apt-2,-East-Boston,-MA-02128
+
+
+property_units
+--------------
+Market-discovered rentable/listable units that belong to an official property.
+Use this table when sources such as Zillow, RentCast, or rental APIs expose a
+unit that does not have its own official assessor PID.
+
+unit_id                bigint primary key generated always as identity
+property_id            bigint not null references properties(property_id) on delete cascade
+source_id              bigint references sources(source_id)
+source_unit_key        text
+unit_label             text
+unit_normalized        text not null
+unit_type              text check (unit_type in ('apartment', 'condo', 'room', 'building', 'unknown'))
+bedrooms               integer
+bathrooms              numeric(4,1)
+living_area_sqft       integer
+discovered_at          timestamptz not null default now()
+first_seen_at          timestamptz not null default now()
+last_seen_at           timestamptz not null default now()
+confidence_score       numeric(4,3)
+status                 text not null default 'unverified'
+raw_record_id          uuid references raw_source_records(raw_record_id)
+created_at             timestamptz not null default now()
+updated_at             timestamptz not null default now()
+
+Constraints:
+- unique (property_id, unit_normalized)
+- unique (source_id, source_unit_key)
+- unit_type in ('apartment', 'condo', 'room', 'building', 'unknown')
+- living_area_sqft >= 0
+- confidence_score between 0 and 1
+- status in ('unverified', 'verified', 'active', 'inactive', 'conflicting')
+
+Indexes:
+- (property_id)
+- (source_id, source_unit_key)
+- (status, last_seen_at desc)
+
+Notes:
+- Tax, ownership, assessor, and assessment records stay on properties.
+- Listing and rent data can reference property_id only for whole-building data,
+  or property_id plus unit_id for unit-specific data.
 
 
 property_physical_attributes
@@ -544,10 +592,11 @@ Examples:
 
 listings
 --------
-Property listing snapshots/events from listing and rental sources.
+Property or unit listing snapshots/events from listing and rental sources.
 
 listing_id             bigint primary key generated always as identity
 property_id            bigint not null references properties(property_id) on delete cascade
+unit_id                bigint references property_units(unit_id) on delete set null
 source_id              bigint not null references sources(source_id)
 listing_status_id      bigint references listing_statuses(listing_status_id)
 listing_type           text not null check (listing_type in ('sale', 'rent'))
@@ -568,8 +617,13 @@ Constraints:
 
 Indexes:
 - (property_id, observed_at desc)
+- (unit_id, observed_at desc)
 - (listing_type, listing_status_id, observed_at desc)
 - (price)
+
+Notes:
+- Whole-building listing: set property_id only.
+- Unit-specific listing: set property_id and unit_id.
 
 
 listing_price_history
@@ -591,10 +645,12 @@ Indexes:
 
 rental_estimates
 ----------------
-Point-in-time rent estimates and market rent observations.
+Point-in-time rent estimates and market rent observations for whole properties
+or specific market-discovered units.
 
 rental_estimate_id     bigint primary key generated always as identity
 property_id            bigint not null references properties(property_id) on delete cascade
+unit_id                bigint references property_units(unit_id) on delete set null
 source_id              bigint not null references sources(source_id)
 estimate_date          date not null
 estimated_rent         numeric(14,2)
@@ -606,11 +662,17 @@ raw_record_id          uuid references raw_source_records(raw_record_id)
 created_at             timestamptz not null default now()
 
 Constraints:
-- unique (property_id, source_id, estimate_date, bedrooms, bathrooms)
+- unique (property_id, source_id, estimate_date, bedrooms, bathrooms) where unit_id is null
+- unique (unit_id, source_id, estimate_date, bedrooms, bathrooms) where unit_id is not null
 
 Indexes:
 - (property_id, estimate_date desc)
+- (unit_id, estimate_date desc)
 - (estimate_date)
+
+Notes:
+- Whole-building rent estimate: set property_id only.
+- Unit-specific rent estimate: set property_id and unit_id.
 
 
 Massachusetts / Boston Specific Tables
@@ -687,6 +749,7 @@ updated_at triggers
 Add a common trigger function to update updated_at columns before update on:
 - addresses
 - properties
+- property_units
 - property_physical_attributes
 - boston_assessor_details
 

@@ -31,8 +31,9 @@ of using Boston PID, RentCast ID, or another external identifier.
 
 Reason:
 No source-specific ID is universal. Boston PID is useful for Boston assessor
-data, but it will not identify RentCast-only properties, non-Boston properties,
-or unit-level records in every source. Surrogate keys keep the core model stable.
+data, but it will not identify every external property or listing source record.
+Surrogate keys keep the core model stable while source-specific identifiers live
+in mapping tables.
 
 
 3. Put source-specific IDs in property_source_ids
@@ -59,7 +60,41 @@ extension tables prevents the generic property table from turning into a wide
 table full of nulls as more locations and sources are added.
 
 
-5. Move is_listed out of properties
+5. Separate official properties from market-discovered units
+------------------------------------------------------------
+I added property_units as a child table under properties.
+
+Reason:
+Analyze Boston gives assessor-level records tied to an official Boston PID, but
+market sources such as Zillow or rental APIs may expose individual apartments,
+rooms, condos, or other rentable units that do not have their own PID. Storing
+those rows as properties would create fake assessor records and confuse parcel,
+tax, ownership, and assessment identity.
+
+property_units lets the pipeline represent these discovered units without
+pretending they are official assessor properties. A unit belongs to a property
+and can carry its own source key, label, normalized unit value, bedroom/bathroom
+details, confidence, status, and raw source lineage.
+
+
+6. Attach market data at the right level
+----------------------------------------
+I added optional unit_id links to listings and rental_estimates.
+
+Reason:
+Some market observations apply to the whole building or assessor property, while
+others apply to a specific unit inside that property. The attachment rule is:
+
+- Whole-building data: property_id only.
+- Unit-specific data: property_id plus unit_id.
+
+This keeps tax, ownership, and assessment data tied to the official property,
+while listing and rent data can be stored at unit level when the source provides
+that detail. It improves data quality, avoids identity confusion, and prepares
+the ETL for external API enrichment.
+
+
+7. Move is_listed out of properties
 -----------------------------------
 The original outline included is_listed on the property table. I replaced this
 with listings and listing_statuses.
@@ -70,7 +105,7 @@ rent, then later sold. Storing a single boolean on properties would lose history
 and create conflicting updates between sources.
 
 
-6. Store last_sale_price as a derived value
+8. Store last_sale_price as a derived value
 -------------------------------------------
 The original transactions outline included last_sale_price. I modeled sales and
 deed transfers in property_transactions instead.
@@ -81,7 +116,7 @@ it separately increases the chance that it becomes stale or disagrees with the
 transaction history.
 
 
-7. Use numeric for money and coordinates, not double
+9. Use numeric for money and coordinates, not double
 ----------------------------------------------------
 Money fields are numeric(14,2). Latitude and longitude are numeric(10,7), with
 an optional PostGIS geography point.
@@ -93,7 +128,7 @@ PostGIS is recommended for distance, containment, and neighborhood/spatial
 queries when you are ready for it.
 
 
-8. Split addresses into their own table
+10. Split addresses into their own table
 ---------------------------------------
 I added addresses and linked properties and mailing addresses to it.
 
@@ -103,7 +138,7 @@ often repeats address fields. A shared address table improves consistency and
 supports future geocoding, address matching, and deduplication.
 
 
-9. Make owners and transaction parties generic
+11. Make owners and transaction parties generic
 ----------------------------------------------
 I added person_or_organizations, property_owners, and transaction_parties.
 
@@ -113,7 +148,7 @@ entities. A generic party table handles all of those without separate owner,
 buyer, and seller tables that would duplicate names and create matching issues.
 
 
-10. Keep common property facts typed, but allow flexible features
+12. Keep common property facts typed, but allow flexible features
 -----------------------------------------------------------------
 I added property_physical_attributes for common fields and property_features for
 less standardized source attributes.
@@ -125,7 +160,7 @@ kitchen style, view, condition, and utility details vary by source, so they fit
 better in a typed feature table.
 
 
-11. Model assessments and taxes separately
+13. Model assessments and taxes separately
 ------------------------------------------
 I separated property_assessments from property_taxes.
 
@@ -136,7 +171,7 @@ amounts. Keeping these separate makes yearly value trends and tax analysis much
 cleaner.
 
 
-12. Use many-to-many zip code to neighborhood mapping
+14. Use many-to-many zip code to neighborhood mapping
 -----------------------------------------------------
 I replaced the single zip_code_to_neighborhood table with postal_codes,
 neighborhoods, and postal_code_neighborhoods.
@@ -147,7 +182,7 @@ multiple zip codes. A many-to-many table avoids incorrect assumptions and works
 better for city-level analysis.
 
 
-13. Add constraints and indexes early
+15. Add constraints and indexes early
 -------------------------------------
 The outline includes unique constraints, foreign keys, check constraints, and
 indexes for common lookup patterns.
@@ -159,7 +194,7 @@ included for expected queries such as lookup by parcel ID, property history,
 latest assessment, active listings, and spatial search.
 
 
-14. Plan for scale without overcomplicating day one
+16. Plan for scale without overcomplicating day one
 ---------------------------------------------------
 The outline recommends partitioning only after large tables grow substantially.
 
@@ -170,7 +205,7 @@ better for early development. Partition when row counts and query plans justify
 it.
 
 
-15. Add analytical views later
+17. Add analytical views later
 ------------------------------
 I listed current_property_summary, latest_property_assessment,
 latest_property_sale, and active_listings as recommended views.
@@ -193,15 +228,18 @@ Recommended first build order:
    property_taxes, owners, and mailing addresses.
 5. Normalize Boston Property Lookup JSON into assessments, taxes, features, and
    latest transaction data.
-6. Normalize RentCast into addresses, source IDs, listings, rental estimates,
-   and source feature fields.
+6. Normalize RentCast, Zillow, and other market sources into addresses, source
+   IDs, property_units when unit-level records are observed, listings, rental
+   estimates, and source feature fields.
 7. Normalize Mass Land Records into property_transactions and
    transaction_parties.
 
 Important follow-up work:
 - Build deterministic address normalization before matching across sources.
 - Store source_record_hash during ingestion to prevent duplicate raw records.
-- Decide whether condominium units should be separate properties or child
-  properties linked to a master parcel.
+- Define matching rules for when an external unit should reuse an existing
+  property_units row versus create a new market-discovered unit.
+- Decide how to handle condominium units that are official assessor properties
+  versus market-discovered units under a master parcel.
 - Add migration tooling such as Alembic before creating production tables.
 - Add dbt or SQL views once normalized loading is stable.
